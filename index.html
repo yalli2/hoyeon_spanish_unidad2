@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unidad 2 · La plaza mayor — 스페인어 중간고사 학습</title>
+<style>
+:root{--bg:#fafaf7;--card:#fff;--ink:#1f2328;--mut:#667085;--line:#e4e4de;--pri:#d9480f;--pri2:#fff1e8;--ok:#2b8a3e;--okbg:#e6f4ea;--bad:#c92a2a;--badbg:#fdeaea;--blue:#1c7ed6;--bluebg:#e7f1fb;--yel:#b57900;--yelbg:#fff6dd}
+@media(prefers-color-scheme:dark){:root{--bg:#16181c;--card:#1f2227;--ink:#eceff4;--mut:#9aa3b2;--line:#2f343b;--pri:#ff8a4c;--pri2:#33261d;--ok:#69db7c;--okbg:#1d3524;--bad:#ff8787;--badbg:#3a2022;--blue:#74c0fc;--bluebg:#1b2c3d;--yel:#ffd43b;--yelbg:#3a3320}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",Segoe UI,sans-serif;line-height:1.6;font-size:16px}
+header{background:linear-gradient(135deg,#e8590c,#f59f00);color:#fff;padding:18px 16px 12px}
+header h1{margin:0;font-size:1.25rem}header p{margin:2px 0 0;opacity:.92;font-size:.9rem}
+nav{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);display:flex;overflow-x:auto;gap:2px;padding:4px 8px;scrollbar-width:none}
+nav a{flex:0 0 auto;text-decoration:none;color:var(--mut);padding:8px 12px;border-radius:999px;font-size:.9rem;white-space:nowrap}
+nav a.on{background:var(--pri2);color:var(--pri);font-weight:700}
+main{max-width:860px;margin:0 auto;padding:14px 14px 60px}
+h2{font-size:1.3rem;margin:.4em 0 .5em}h3{font-size:1.1rem;margin:1.1em 0 .4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;text-align:left;font:inherit}
+.tile:hover{border-color:var(--pri)}.tile b{display:block}.tile small{color:var(--mut)}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:10px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer}
+.btn.sec{background:var(--pri2);color:var(--pri)}.btn.sm{padding:5px 10px;font-size:.85rem}.btn:disabled{opacity:.5;cursor:default}
+.btn.ghost{background:transparent;color:var(--mut);border:1px solid var(--line)}
+.spk{border:0;background:var(--bluebg);border-radius:999px;cursor:pointer;padding:1px 7px;font-size:.85rem}
+.chip{display:inline-block;background:var(--pri2);color:var(--pri);border-radius:999px;padding:2px 10px;margin:2px;font-size:.9rem}
+.tbl{width:100%;border-collapse:collapse;font-size:.93rem;margin:8px 0}.tbl th,.tbl td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}.tbl th{background:var(--pri2);color:var(--pri)}
+.wrapx{overflow-x:auto}
+.ex{background:var(--bluebg);border-radius:10px;padding:6px 10px;margin:6px 0}.ex span{color:var(--mut);font-size:.9rem;display:block}
+.note,.tip,.warn{border-radius:10px;padding:8px 12px;margin:10px 0;font-size:.95rem}
+.tip{background:var(--okbg)}.note{background:var(--bluebg)}.warn{background:var(--yelbg)}
+.bar{flex:1;height:8px;background:var(--line);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:var(--pri)}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.qhead{display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--mut)}
+.qtext{font-size:1.1rem;margin:12px 0}
+.opt{display:block;width:100%;text-align:left;background:var(--card);color:var(--ink);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;margin:6px 0;font:inherit;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--pri)}.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.bad{border-color:var(--bad);background:var(--badbg)}
+input[type=text],textarea,select{width:100%;padding:10px;border:1.5px solid var(--line);border-radius:10px;font:inherit;background:var(--card);color:var(--ink)}
+textarea{min-height:170px}
+.fb{border-radius:10px;padding:10px 12px;margin:10px 0}.fb.ok{background:var(--okbg)}.fb.bad{background:var(--badbg)}.fb.acc{background:var(--yelbg)}
+.passage{background:var(--yelbg);border-radius:10px;padding:10px 14px;margin:10px 0;white-space:normal}
+.secbanner{background:var(--pri);color:#fff;border-radius:8px;padding:4px 12px;display:inline-block;font-weight:700;margin:8px 0}
+.tok{display:inline-block;background:var(--pri2);color:var(--pri);border:1px solid var(--pri);border-radius:8px;padding:4px 10px;margin:3px;cursor:pointer;font:inherit}
+.built{min-height:48px;border:2px dashed var(--line);border-radius:10px;padding:6px;margin:8px 0}
+.flash{min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;font-size:1.6rem;font-weight:700;user-select:none}
+.flash small{font-size:1rem;font-weight:400;color:var(--mut)}
+.map{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0;text-align:center}
+.mrow{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.mrow span{background:var(--pri2);border-radius:8px;padding:8px 2px;font-size:.85rem}
+.mst{background:#868e96;color:#fff;border-radius:6px;padding:4px;margin:6px 0;font-size:.8rem}
+.hideko .ko{filter:blur(6px);cursor:pointer}.hideko .ko.show{filter:none}
+.bars div{margin:6px 0}.bars .b{height:18px;background:var(--pri);border-radius:5px;color:#fff;font-size:.8rem;padding-left:6px}
+ul.chk{list-style:none;padding:0}ul.chk li{padding:2px 0}
+footer{text-align:center;color:var(--mut);font-size:.8rem;padding:20px}
+.pill{font-size:.75rem;background:var(--okbg);color:var(--ok);border-radius:99px;padding:1px 8px;margin-left:6px}
+</style>
+</head>
+<body>
+<header><h1>🏙️ Unidad 2 · La plaza mayor</h1><p>Spanish 2 중간고사 대비 · 혼자서 끝내는 인터랙티브 학습 (Entre culturas 2)</p></header>
+<nav id="nav"></nav>
+<main id="app"></main>
+<footer>Profesora: M. Fernanda Osorno · Entre culturas 2 (Versión 2026) · 학습 보조용 자료입니다. 진도는 이 브라우저에 저장됩니다.</footer>
+
+<script>
+/* ================= 기본 도구 ================= */
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+let S={scores:{},known:{},wrong:[],goals:{},practiced:{},draft:''};
+try{const r=localStorage.getItem('u2plaza');if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+const save=()=>{try{localStorage.setItem('u2plaza',JSON.stringify(S))}catch(e){}};
+const app=$('#app');
+
+/* ================= 음성(TTS) ================= */
+const TTS='speechSynthesis' in window;
+let dlgTok=0;
+function pickVoice(){const v=speechSynthesis.getVoices().filter(x=>/^es/i.test(x.lang));for(const p of ['es-AR','es-MX','es-US','es-ES']){const f=v.find(x=>x.lang.replace('_','-')===p);if(f)return f}return v[0]||null}
+function say(t,rate=0.9,pitch=1,cb,keep){
+  if(!TTS){alert('이 브라우저는 음성 재생을 지원하지 않아요. Chrome/Safari를 사용해 보세요.');return}
+  if(!keep)dlgTok++;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(t.replace(/[¿¡]/g,''));const v=pickVoice();
+  u.lang=v?v.lang:'es-ES';if(v)u.voice=v;u.rate=rate;u.pitch=pitch;if(cb)u.onend=cb;
+  speechSynthesis.speak(u);
+}
+function stopAudio(){dlgTok++;if(TTS)speechSynthesis.cancel()}
+function playDialog(key,rate){
+  const d=DLG[key];const my=++dlgTok;let i=0;
+  (function nx(){if(my!==dlgTok||i>=d.lines.length)return;const l=d.lines[i++];say(l[1],rate,l[0]==='B'?1.2:0.95,nx,true)})();
+}
+if(TTS)speechSynthesis.onvoiceschanged=()=>{};
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-say]');if(b){e.stopPropagation();say(b.dataset.say)}
+  const k=e.target.closest('.hideko .ko');if(k)k.classList.toggle('show');
+});
+const spk=t=>`<button class="spk" data-say="${esc(t)}" title="듣기">🔊</button>`;
+const E=(es,ko)=>`<div class="ex">${spk(es)} <b>${es}</b>${ko?`<span>${ko}</span>`:''}</div>`;
+
+/* ================= 문제 생성기 ================= */
+const mc=(q,a,w,exp='',x={})=>({type:'mc',q,answer:a,options:[a,...w],exp,...x});
+const fl=(q,a,exp='',x={})=>({type:'fill',q,answer:Array.isArray(a)?a:[a],exp,...x});
+const od=(q,a,exp='',x={})=>({type:'order',q,answer:a,exp,...x});
+const strip=s=>s.toLowerCase().replace(/[¿?¡!.,;:"“”]/g,'').replace(/\s+/g,' ').trim();
+const noacc=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+function chk(user,answers){const u=strip(user);if(!u)return 'no';for(const a of answers)if(u===strip(a))return 'ok';for(const a of answers)if(noacc(u)===noacc(strip(a)))return 'acc';return 'no'}
+
+/* ================= 어휘 데이터 ================= */
+const V=[
+{id:'places',t:'City Places & Public Spaces',ko:'도시 장소·공공장소',ic:'🏙️',w:[
+['la plaza','광장','plaza / square'],['el parque','공원','park'],['la calle','거리, 길','street'],['la avenida','대로','avenue'],['la esquina','모퉁이','corner'],['la cuadra','(한) 블록','block'],['el barrio','동네','neighborhood'],['el centro','시내, 중심가','downtown'],['el museo','박물관','museum'],['el estadio','경기장','stadium'],['el cine','영화관','movie theater'],['el gimnasio','체육관, 헬스장','gym'],['la escuela / el colegio','학교','school',['la escuela','el colegio']],['la biblioteca','도서관','library'],['el centro comercial','쇼핑몰','shopping mall']]},
+{id:'shops',t:'Shops & Services',ko:'가게·서비스',ic:'🏪',w:[
+['la farmacia','약국','pharmacy'],['el banco','은행','bank'],['el cajero automático','ATM(현금인출기)','ATM'],['el hospital','병원','hospital'],['la panadería','빵집','bakery'],['el supermercado','슈퍼마켓','supermarket'],['la tienda','가게','store'],['la tienda de ropa','옷 가게','clothing store'],['la tienda de zapatos','신발 가게','shoe store'],['la cafetería','카페','cafe'],['el restaurante','식당','restaurant'],['el kiosco','키오스크(길가 작은 매점)','kiosk'],['la heladería','아이스크림 가게','ice cream shop'],['la feria','장터, 시장(임시 장)','fair / market'],['el mercado','시장','market'],['la oficina de correos','우체국','post office']]},
+{id:'transport',t:'Transportation',ko:'교통',ic:'🚇',w:[
+['la estación de subte / metro','지하철역','subway station',['la estación de subte','la estación de metro']],['la parada de bus','버스 정류장','bus stop'],['el autobús','버스','bus'],['el transporte público','대중교통','public transportation']]},
+{id:'products',t:'Products & Shopping',ko:'물건·쇼핑',ic:'🛍️',w:[
+['la ropa','옷','clothes'],['los zapatos','신발','shoes'],['el pan','빵','bread'],['la carne','고기','meat'],['el helado','아이스크림','ice cream'],['las frutas','과일','fruits'],['las verduras','채소','vegetables'],['la comida','음식','food'],['los libros','책','books'],['los regalos','선물','gifts'],['el dinero en efectivo','현금','cash'],['la tarjeta de crédito','신용카드','credit card']]},
+{id:'habits',t:'Shopping Habits & Technology',ko:'쇼핑 습관·기술',ic:'💻',w:[
+['comprar en línea','온라인으로 구매하다','to shop online'],['comprar en una tienda','가게에서 구매하다','to shop in a store'],['las compras','쇼핑, 장보기','shopping'],['los productos','제품','products'],['la computadora','컴퓨터','computer'],['el teléfono','전화기, 휴대폰','phone'],['los dispositivos electrónicos','전자 기기','electronic devices'],['comprar','사다','to buy'],['vender','팔다','to sell'],['pagar','지불하다','to pay'],['preferir','선호하다','to prefer']]},
+{id:'actions',t:'Actions & Directions',ko:'행동·길 안내 동사',ic:'🧭',w:[
+['caminar','걷다','to walk'],['doblar','(방향을) 돌다','to turn'],['girar','돌다, 회전하다','to turn'],['seguir','계속 가다, 따라가다','to follow / continue'],['cruzar','건너다','to cross'],['pasar','지나가다','to pass'],['llegar','도착하다','to arrive'],['visitar','방문하다','to visit'],['comer','먹다','to eat'],['pasear','산책하다','to stroll'],['salir','나가다, 출발하다','to go out / leave'],['sacar dinero','돈을 뽑다(인출하다)','to withdraw money'],['tomar un café','커피를 마시다','to have a coffee'],['ver un espectáculo','공연을 보다','to see a show']]},
+{id:'culture',t:'Culture & Community',ko:'문화·지역사회',ic:'🌎',w:[
+['Argentina','아르헨티나','Argentina'],['Buenos Aires','부에노스아이레스','Buenos Aires'],['La Boca','라 보카(부에노스아이레스의 알록달록한 동네)','La Boca'],['el tango','탱고','tango'],['el mate','마테(전통 차)','mate'],['el asado','아사도(아르헨티나식 바비큐)','Argentine barbecue'],['las empanadas','엠파나다(속을 채운 페이스트리)','empanadas'],['la feria artesanal','수공예 장터','artisan fair'],['las artesanías','수공예품','handicrafts'],['los espacios públicos','공공 공간','public spaces']]}
+];
+const ALLW=V.flatMap(c=>c.w);
+const art=/^(el|la|los|las|un|una)\s+/;
+function accepted(w){const out=new Set();(w[3]||[w[0]]).forEach(b=>{out.add(b);out.add(b.replace(art,''))});return [...out]}
+function vocabQs(words,n){
+  const picks=shuffle(words).slice(0,n);
+  return picks.map((w,i)=>{
+    const oth=shuffle(words.filter(x=>x!==w));const kind=i%4;
+    if(kind===0)return mc(`${spk(w[0])} <b>${w[0]}</b> 의 뜻은?`,w[1],oth.slice(0,3).map(x=>x[1]),`${w[0]} = ${w[1]} (${w[2]})`,{cat:'Vocabulary',sec:'TEST II'});
+    if(kind===1)return mc(`"<b>${w[1]}</b>" 을(를) 스페인어로?`,w[0],oth.slice(0,3).map(x=>x[0]),`${w[1]} = ${w[0]}`,{cat:'Vocabulary',sec:'TEST II'});
+    if(kind===2)return fl(`"<b>${w[1]}</b>" (${w[2]}) → 스페인어로 쓰세요 (관사는 써도, 안 써도 돼요)`,accepted(w),`정답: ${w[0]}`,{cat:'Vocabulary',sec:'TEST II'});
+    return TTS?mc(`🔊 듣고 뜻을 고르세요`,w[1],oth.slice(0,3).map(x=>x[1]),`${w[0]} = ${w[1]}`,{audio:w[0],cat:'Vocabulary',sec:'TEST II'})
+              :mc(`${spk(w[0])} <b>${w[0]}</b> = ?`,w[2],oth.slice(0,3).map(x=>x[2]),`${w[0]} = ${w[2]}`,{cat:'Vocabulary',sec:'TEST II'});
+  });
+}
+
+/* ================= 문법 데이터 ================= */
+const MAP=`<div class="map"><div class="mrow"><span>🏦<br>el banco</span><span>💊<br>la farmacia</span><span>📚<br>la biblioteca</span><span>☕<br>la cafetería</span></div><div class="mst">Calle Principal ➡ Caminas hacia el ESTE (북쪽 ↑ 위 / 남쪽 ↓ 아래)</div><div class="mrow"><span>🥖<br>la panadería</span><span>🌳<br>el parque</span><span>🎬<br>el cine</span><span>🏫<br>la escuela</span></div><small>동쪽(오른쪽 화면)으로 걸어가면 위쪽 건물은 <b>왼쪽(izquierda)</b>, 아래쪽 건물은 <b>오른쪽(derecha)</b>이에요.</small></div>`;
+const GC='Grammar';
+const G=[
+{id:'hay',t:'Hay vs. Estar',ko:'있다: hay와 estar',ic:'📍',lesson:`
+<p><b>hay</b> = ~이 있다 (there is / there are). <u>모양이 변하지 않아요</u> (단수·복수 모두 hay).<br><b>estar</b> = ~에 있다 (위치). 주어에 따라 <b>está / están</b>.</p>
+<div class="wrapx"><table class="tbl"><tr><th></th><th>hay</th><th>estar</th></tr>
+<tr><td>쓰임</td><td>존재 여부 (불특정·처음 소개)</td><td>이미 아는 특정 대상의 위치</td></tr>
+<tr><td>함께 쓰는 말</td><td>un, una, unos, unas, 숫자, muchos, varios, 관사 없음</td><td>el, la, los, las, mi, su, 고유명사</td></tr>
+<tr><td>부정</td><td>no hay</td><td>no está / no están</td></tr>
+<tr><td>질문</td><td>¿Hay un banco aquí?</td><td>¿Dónde está el banco?</td></tr></table></div>
+${E('Hay un parque en mi barrio.','우리 동네에는 공원이 하나 있어요.')}${E('El parque está cerca de la escuela.','그 공원은 학교 근처에 있어요.')}${E('Hay dos cines en el centro.','시내에 영화관이 두 개 있어요.')}${E('Los cines están en el centro.','그 영화관들은 시내에 있어요.')}
+<div class="tip">💡 <b>요령</b>: un / una / 숫자 → <b>hay</b> &nbsp;|&nbsp; el / la / mi / 이름 → <b>está(n)</b></div>`,
+qs:[
+mc('___ un parque en mi barrio.','Hay',['Está','Están','Es'],'un parque(불특정) → hay',{cat:GC}),
+mc('El parque ___ cerca de la escuela.','está',['hay','están','es'],'el parque(특정) → está',{cat:GC}),
+mc('En el centro ___ muchas tiendas.','hay',['está','están','son'],'muchas tiendas(불특정) → hay (복수여도 hay)',{cat:GC}),
+mc('Los museos ___ en el centro.','están',['hay','está','es'],'los museos(특정, 복수) → están',{cat:GC}),
+mc('¿Dónde ___ la farmacia?','está',['hay','están','es'],'¿Dónde está + 특정 장소?',{cat:GC}),
+mc('¿___ un banco cerca de aquí?','Hay',['Está','Están','Son'],'있는지 묻기 → ¿Hay ...?',{cat:GC}),
+fl('La biblioteca ___ al lado del cine.','está','특정 장소의 위치 → está',{cat:GC}),
+fl('En mi barrio no ___ un estadio.','hay','no hay = 없다',{cat:GC}),
+mc('Mi escuela ___ lejos de mi casa.','está',['hay','están','son'],'mi escuela(특정) → está',{cat:GC}),
+mc('Buenos Aires ___ en Argentina.','está',['hay','están','son'],'고유명사 → está',{cat:GC}),
+fl('___ dos cines y un teatro en la avenida.','Hay','숫자/un → hay',{cat:GC}),
+mc('Las empanadas ___ en la mesa.','están',['hay','está','es'],'las empanadas(특정, 복수) → están',{cat:GC})]},
+
+{id:'prep',t:'Prepositions of Location',ko:'위치 전치사',ic:'🗺️',lesson:`
+<div class="wrapx"><table class="tbl"><tr><th>스페인어</th><th>뜻</th></tr>
+<tr><td>a la derecha de</td><td>~의 오른쪽에</td></tr><tr><td>a la izquierda de</td><td>~의 왼쪽에</td></tr><tr><td>al lado de</td><td>~의 옆에</td></tr>
+<tr><td>detrás de</td><td>~의 뒤에</td></tr><tr><td>delante de</td><td>~의 앞에</td></tr><tr><td>entre ... y ...</td><td>~와 ~ 사이에</td></tr>
+<tr><td>cerca de</td><td>~ 가까이에</td></tr><tr><td>lejos de</td><td>~에서 멀리</td></tr><tr><td>enfrente de</td><td>~의 맞은편에</td></tr></table></div>
+<div class="warn">⚠️ <b>de + el = del</b> &nbsp;(la, los, las는 그대로)<br>El banco está al lado <b>del</b> cine. / La farmacia está al lado <b>de la</b> escuela.</div>
+${E('La farmacia está al lado del banco.','약국은 은행 옆에 있어요.')}${E('El parque está entre el cine y la panadería.','공원은 영화관과 빵집 사이에 있어요.')}${E('Mi casa está lejos de la estación de metro.','우리 집은 지하철역에서 멀어요.')}
+<h3>아래 지도를 보고 연습하세요</h3>${MAP}`,
+qs:[
+mc('¿Qué lugar está <b>enfrente de</b> la farmacia?','el parque',['el cine','la panadería','la escuela'],'약국은 위쪽 2번째, 맞은편(아래쪽 2번째)은 공원',{ctx:MAP,cat:GC}),
+mc('¿Qué lugar está <b>entre</b> el parque y la escuela?','el cine',['el banco','la biblioteca','la panadería'],'공원 - 영화관 - 학교',{ctx:MAP,cat:GC}),
+mc('¿Qué lugar está <b>al lado de</b> la biblioteca?','la farmacia',['el cine','la panadería','el parque'],'위쪽 줄: 약국 - 도서관 - 카페 (보기 중에서는 약국)',{ctx:MAP,cat:GC}),
+mc('Caminas hacia el este. La cafetería está a la ___.','izquierda',['derecha','espalda','lado'],'동쪽을 보고 걸으면 북쪽(위쪽 줄)은 왼쪽',{ctx:MAP,cat:GC}),
+mc('Caminas hacia el este. El cine está a la ___.','derecha',['izquierda','delante','detrás'],'남쪽(아래쪽 줄)은 오른쪽',{ctx:MAP,cat:GC}),
+mc('¿Qué lugar está <b>enfrente del</b> banco?','la panadería',['el parque','el cine','la escuela'],'첫 번째 칸 맞은편',{ctx:MAP,cat:GC}),
+mc('¿Qué lugar está <b>lejos de</b> la panadería?','la escuela',['el banco','el parque','la farmacia'],'빵집(1번째 칸)에서 학교(4번째 칸)가 가장 멀어요',{ctx:MAP,cat:GC}),
+fl('El parque está ___ de la farmacia. (맞은편)','enfrente','enfrente de = 맞은편',{ctx:MAP,cat:GC}),
+fl('La farmacia está al lado ___ banco.','del','de + el = del',{cat:GC}),
+mc('Mi casa está ___ la plaza. (아주 가까이)','cerca de',['lejos de','detrás','entre'],'cerca de = 가까이',{cat:GC}),
+mc('La estación está ___ mi escuela. (멀리)','lejos de',['cerca de','al lado de','entre'],'lejos de = 멀리',{cat:GC}),
+fl('El museo está ___ el banco y el cine. (사이)','entre','entre A y B',{cat:GC})]},
+
+{id:'cmd',t:'Affirmative Tú Commands',ko:'긍정 명령형 (tú)',ic:'☝️',lesson:`
+<p>친구(tú)에게 "~해!"라고 말할 때 써요. 길 안내·추천에 가장 많이 나와요.</p>
+<h3>① 규칙형: 현재 시제 <u>tú가 아니라 él/ella 형태</u>와 같아요</h3>
+<div class="wrapx"><table class="tbl"><tr><th>원형</th><th>tú 명령</th><th>뜻</th></tr>
+<tr><td>caminar</td><td><b>camina</b></td><td>걸어(가)</td></tr><tr><td>doblar</td><td><b>dobla</b></td><td>돌아</td></tr><tr><td>girar</td><td><b>gira</b></td><td>돌아</td></tr><tr><td>cruzar</td><td><b>cruza</b></td><td>건너</td></tr>
+<tr><td>visitar</td><td><b>visita</b></td><td>방문해</td></tr><tr><td>comprar</td><td><b>compra</b></td><td>사</td></tr><tr><td>comer</td><td><b>come</b></td><td>먹어</td></tr><tr><td>pasear</td><td><b>pasea</b></td><td>산책해</td></tr></table></div>
+<h3>② 어간 변화 동사는 어간 변화를 유지</h3>
+${E('seguir → Sigue recto.','e→i 변화: sigue')}
+<h3>③ 불규칙 (꼭 외우기!)</h3>
+<div class="wrapx"><table class="tbl"><tr><th>ir</th><th>salir</th><th>hacer</th><th>tener</th><th>ser</th></tr><tr><td><b>ve</b></td><td><b>sal</b></td><td><b>haz</b></td><td><b>ten</b></td><td><b>sé</b></td></tr></table></div>
+<small>추가로 알아두면 좋은 불규칙: decir→<b>di</b>, poner→<b>pon</b>, venir→<b>ven</b></small>
+${E('Ve a la farmacia.','약국에 가.')}${E('Sal de la estación y dobla a la derecha.','역에서 나와서 오른쪽으로 돌아.')}${E('Haz la tarea.','숙제해.')}${E('Ten cuidado.','조심해.')}${E('Sé amable.','친절해라.')}
+<div class="warn">⚠️ <b>sé</b>(ser의 명령형)에는 악센트가 있어요. 이 단원은 <b>긍정</b> 명령만 다뤄요. (Argentina에서는 vos를 써서 caminá, doblá처럼 말하지만, 시험은 tú 기준!)</div>`,
+qs:[
+fl('(caminar) ___ dos cuadras.','camina','규칙형: él 형태',{cat:GC}),
+fl('(doblar) ___ a la derecha.','dobla','규칙형',{cat:GC}),
+fl('(seguir) ___ recto.','sigue','e→i 어간 변화',{cat:GC}),
+fl('(cruzar) ___ la calle.','cruza','규칙형',{cat:GC}),
+fl('(ir) ___ a la farmacia.','ve','ir → ve',{cat:GC}),
+fl('(salir) ___ de la estación.','sal','salir → sal',{cat:GC}),
+fl('(hacer) ___ tu tarea.','haz','hacer → haz',{cat:GC}),
+fl('(tener) ___ cuidado.','ten','tener → ten',{cat:GC}),
+fl('(ser) ___ amable.','sé','ser → sé (악센트!)',{cat:GC}),
+mc('Tú 명령형 of <b>comer</b>:','come',['comes','coma','comer'],'규칙형: come',{cat:GC}),
+mc('Tú 명령형 of <b>salir</b>:','sal',['sale','sales','salgas'],'불규칙: sal',{cat:GC}),
+mc('Tú 명령형 of <b>seguir</b>:','sigue',['sigues','seguí','seguir'],'sigue',{cat:GC}),
+fl('(visitar) ___ el museo de arte.','visita','규칙형',{cat:GC}),
+fl('(pasear) ___ por el parque.','pasea','규칙형',{cat:GC}),
+fl('(comprar) ___ pan en la panadería.','compra','규칙형',{cat:GC}),
+mc('Tengo hambre. — ___ a la panadería.','Ve',['Va','Vas','Ir'],'ir의 명령형 = ve',{cat:GC})]},
+
+{id:'dir',t:'Giving Directions',ko:'길 안내하기',ic:'🧭',lesson:`
+<div class="wrapx"><table class="tbl"><tr><th>스페인어</th><th>뜻</th></tr>
+<tr><td>Sigue recto.</td><td>직진해.</td></tr><tr><td>Dobla a la izquierda / derecha.</td><td>왼쪽 / 오른쪽으로 돌아.</td></tr><tr><td>Gira a la izquierda / derecha.</td><td>왼쪽 / 오른쪽으로 돌아.</td></tr>
+<tr><td>Cruza la calle.</td><td>길을 건너.</td></tr><tr><td>Camina una cuadra (dos cuadras).</td><td>한 블록(두 블록) 걸어가.</td></tr><tr><td>Está al lado de... / en la esquina.</td><td>~ 옆에 있어 / 모퉁이에 있어.</td></tr>
+<tr><td>Pasa por la plaza.</td><td>광장을 지나가.</td></tr></table></div>
+<h3>유용한 질문</h3>
+${E('¿Dónde está el banco?','은행이 어디에 있나요? (위치)')}${E('¿Adónde voy?','어디로 가야 하죠? (목적지 방향)')}${E('¿Cómo llego al museo?','박물관에 어떻게 가나요? (방법)')}
+<div class="note">📝 <b>¿Dónde</b> = 어디에(위치) &nbsp;|&nbsp; <b>¿Adónde</b> = 어디로(이동 방향) &nbsp;|&nbsp; <b>¿Cómo llego...?</b> = 어떻게 도착하나요?</div>
+<h3>길 안내 예시</h3>
+${E('Sigue recto dos cuadras, dobla a la izquierda y cruza la calle. El banco está al lado de la farmacia.','직진 두 블록 → 왼쪽 → 길 건너기. 은행은 약국 옆에 있어요.')}
+<div class="tip">💡 순서를 말할 때는 <b>primero, después, finalmente</b> 를 함께 쓰면 좋아요.</div>`,
+qs:[
+od('"직진해서 두 블록 가세요" 를 만드세요','Sigue recto dos cuadras','',{cat:GC}),
+od('"모퉁이에서 왼쪽으로 도세요" 를 만드세요','Dobla a la izquierda en la esquina','',{cat:GC}),
+od('"길을 건너고 한 블록 걸어가세요" 를 만드세요','Cruza la calle y camina una cuadra','',{cat:GC}),
+od('"약국은 은행 옆에 있어요" 를 만드세요','La farmacia está al lado del banco','',{cat:GC}),
+mc('¿Cómo llego al museo? 가장 알맞은 대답은?','Sigue recto y dobla a la derecha.',['El museo es grande.','Me gusta el museo.','Hay un museo.'],'¿Cómo llego...? → 길 안내 명령형',{cat:GC}),
+mc('"왼쪽으로 도세요" =','Dobla a la izquierda.',['Cruza la calle.','Sigue recto.','Camina una cuadra.'],'',{cat:GC}),
+mc('"길을 건너세요" =','Cruza la calle.',['Dobla a la derecha.','Sigue recto.','Está en la esquina.'],'',{cat:GC}),
+fl('Camina una ___ y dobla a la derecha.','cuadra','cuadra = 블록',{cat:GC}),
+mc('¿___ voy para comprar medicinas? (어디로 가야 하죠?)','Adónde',['Dónde','Cómo','Qué'],'이동 방향 → ¿Adónde?',{cat:GC}),
+fl('¿___ llego al banco?','Cómo','¿Cómo llego...?',{cat:GC}),
+mc('"Sigue recto" 의 뜻은?','직진해',['오른쪽으로 돌아','길을 건너','멈춰'],'',{cat:GC})]},
+
+{id:'se',t:'Expressions with Se',ko:'se 표현 (비인칭 수동)',ic:'🏷️',lesson:`
+<p><b>se + 동사(3인칭) + 명사</b> → "~을 판다/한다" (누가 하는지 중요하지 않을 때). 가게 간판·광고에 자주 나와요.</p>
+<div class="tip">💡 <b>동사는 뒤에 오는 명사에 일치</b>시켜요.<br>명사 단수 → se vende / 명사 복수 → se venden</div>
+<div class="wrapx"><table class="tbl"><tr><th>단수</th><th>복수</th><th>뜻</th></tr>
+<tr><td>Se vende pan.</td><td>Se venden zapatos.</td><td>판다</td></tr><tr><td>Se prepara el café.</td><td>Se preparan empanadas.</td><td>만든다(준비한다)</td></tr>
+<tr><td>Se acepta tarjeta.</td><td>Se aceptan tarjetas.</td><td>받는다</td></tr><tr><td>Se habla español.</td><td>Se hablan dos idiomas.</td><td>(언어를) 쓴다</td></tr>
+<tr><td colspan="2">Se puede caminar por el parque. (se puede + 동사원형)</td><td>~할 수 있다</td></tr>
+<tr><td colspan="2">Se pueden comprar frutas en la feria. (복수 명사가 오면 se pueden)</td><td>~할 수 있다</td></tr></table></div>
+${E('En la panadería se vende pan fresco.','빵집에서는 신선한 빵을 팔아요.')}${E('En la tienda se venden zapatos y ropa.','가게에서는 신발과 옷을 팔아요.')}${E('En Argentina se habla español.','아르헨티나에서는 스페인어를 써요.')}${E('En el banco se puede sacar dinero.','은행에서는 돈을 뽑을 수 있어요.')}${E('Aquí se aceptan tarjetas de crédito.','여기서는 신용카드를 받아요.')}`,
+qs:[
+fl('En la panadería ___ pan. (vender)','se vende','pan = 단수',{cat:GC}),
+fl('En la tienda ___ zapatos. (vender)','se venden','zapatos = 복수',{cat:GC}),
+fl('En Argentina ___ español. (hablar)','se habla','español = 단수',{cat:GC}),
+fl('En el restaurante ___ tarjetas de crédito. (aceptar)','se aceptan','tarjetas = 복수',{cat:GC}),
+fl('En la farmacia ___ tarjeta de crédito. (aceptar)','se acepta','tarjeta = 단수',{cat:GC}),
+fl('Aquí ___ empanadas caseras. (preparar)','se preparan','empanadas = 복수',{cat:GC}),
+mc('En el banco ___ sacar dinero.','se puede',['se vende','se habla','se acepta'],'se puede + 동사원형',{cat:GC}),
+fl('En el parque ___ caminar y correr. (poder)','se puede','se puede + 동사원형',{cat:GC}),
+fl('En el mercado ___ comprar frutas y verduras. (poder)',['se pueden','se puede'],'복수 명사가 뒤에 오면 se pueden이 교과서 형태',{cat:GC}),
+mc('En la panadería ___ el pan por la mañana.','se prepara',['se preparan','se habla','se puede'],'el pan = 단수',{cat:GC}),
+mc('En esta tienda ___ frutas y verduras.','se venden',['se vende','se vendes','se vendo'],'frutas y verduras = 복수',{cat:GC}),
+od('"여기서는 스페인어를 써요" 를 만드세요','Aquí se habla español','',{cat:GC}),
+od('"빵집에서는 빵을 팔아요" 를 만드세요','En la panadería se vende pan','',{cat:GC})]},
+
+{id:'rec',t:'Needs & Recommendations',ko:'필요·추천 표현',ic:'💬',lesson:`
+<div class="wrapx"><table class="tbl"><tr><th>표현</th><th>뒤에 오는 것</th><th>예</th></tr>
+<tr><td><b>Quiero</b>...</td><td>동사원형 / 명사</td><td>Quiero comprar pan.</td></tr>
+<tr><td><b>Necesito</b>...</td><td>동사원형 / 명사</td><td>Necesito sacar dinero.</td></tr>
+<tr><td><b>Me gustaría</b>...</td><td>동사원형</td><td>Me gustaría ver un espectáculo.</td></tr>
+<tr><td><b>Ve a</b>...</td><td>장소</td><td>Ve a la farmacia.</td></tr>
+<tr><td><b>Visita</b>...</td><td>장소</td><td>Visita el museo.</td></tr>
+<tr><td><b>Te recomiendo</b>...</td><td>동사원형 / 명사</td><td>Te recomiendo visitar La Boca.</td></tr></table></div>
+<div class="warn">⚠️ <b>a + el = al</b> : Ve <b>al</b> banco / Ve <b>al</b> cajero automático. &nbsp; (a la, a los, a las는 그대로)</div>
+<h3>상황별 추천 (Situation → Recommendation)</h3>
+<div class="wrapx"><table class="tbl"><tr><th>필요</th><th>추천</th></tr>
+<tr><td>Necesito medicina.</td><td>Ve a la farmacia.</td></tr><tr><td>Quiero sacar dinero.</td><td>Ve al cajero automático.</td></tr><tr><td>Quiero pan.</td><td>Ve a la panadería.</td></tr><tr><td>Quiero tomar un café.</td><td>Ve a la cafetería.</td></tr><tr><td>Quiero helado.</td><td>Ve a la heladería.</td></tr><tr><td>Necesito libros.</td><td>Visita la biblioteca.</td></tr><tr><td>Quiero ver una película.</td><td>Te recomiendo el cine.</td></tr></table></div>`,
+qs:[
+mc('Necesito medicina. →','Ve a la farmacia.',['Ve a la panadería.','Ve al cine.','Ve a la biblioteca.'],'',{cat:GC}),
+mc('Quiero sacar dinero. →','Ve al cajero automático.',['Ve a la panadería.','Ve al cine.','Ve a la heladería.'],'',{cat:GC}),
+mc('Tengo hambre y quiero pan. →','Ve a la panadería.',['Ve a la farmacia.','Ve al banco.','Ve al gimnasio.'],'',{cat:GC}),
+mc('Me gustaría ver una película. →','Te recomiendo el cine.',['Te recomiendo la farmacia.','Te recomiendo el banco.','Te recomiendo la panadería.'],'',{cat:GC}),
+mc('Necesito libros para estudiar. →','Visita la biblioteca.',['Visita el estadio.','Visita la heladería.','Visita la parada de bus.'],'',{cat:GC}),
+mc('Quiero comprar frutas y verduras frescas. →','Ve al mercado.',['Ve al cine.','Ve al banco.','Ve a la farmacia.'],'',{cat:GC}),
+mc('Quiero comer helado. →','Ve a la heladería.',['Ve a la biblioteca.','Ve a la escuela.','Ve al hospital.'],'',{cat:GC}),
+fl('Quiero ___ zapatos. (comprar)','comprar','quiero + 동사원형',{cat:GC}),
+fl('Te ___ visitar La Boca.','recomiendo','te recomiendo + 동사원형',{cat:GC}),
+fl('Me ___ comprar un regalo.','gustaría','me gustaría + 동사원형',{cat:GC}),
+fl('___ a la estación de subte. (ir)','Ve','ir의 명령형',{cat:GC}),
+fl('Necesito ___ dinero. (sacar)','sacar','necesito + 동사원형',{cat:GC}),
+mc('Ve + a + el banco =','Ve al banco',['Ve a el banco','Ve del banco','Ve a la banco'],'a + el = al',{cat:GC})]},
+
+{id:'pref',t:'Shopping Preferences',ko:'쇼핑 선호 말하기',ic:'💳',lesson:`
+<p><b>preferir</b> (e→ie 어간 변화) = 선호하다</p>
+<div class="wrapx"><table class="tbl"><tr><th>yo</th><th>tú</th><th>él/ella/usted</th><th>nosotros</th><th>ellos/ellas/ustedes</th></tr><tr><td>prefiero</td><td>prefieres</td><td>prefiere</td><td>preferimos</td><td>prefieren</td></tr></table></div>
+${E('Prefiero comprar en línea porque es rápido.','빠르기 때문에 온라인 구매를 선호해요.')}${E('Prefiero comprar en una tienda porque me gusta ver los productos.','제품을 보는 게 좋아서 가게에서 사는 걸 선호해요.')}${E('¿Dónde prefieres comprar? ¿Por qué?','어디서 사는 걸 선호해? 왜?')}
+<div class="wrapx"><table class="tbl"><tr><th>me gusta + 단수/동사원형</th><th>me gustan + 복수 명사</th></tr><tr><td>Me gusta el mate. / Me gusta comprar.</td><td>Me gustan las artesanías.</td></tr></table></div>
+<div class="note">📝 <b>porque</b> (왜냐하면, 답) ↔ <b>¿por qué?</b> (왜?, 질문) &nbsp;|&nbsp; <b>por eso</b> = 그래서</div>
+${E('Es barato, por eso compro aquí.','싸요, 그래서 여기서 사요.')}${E('Pago con tarjeta de crédito, pero mi padre paga en efectivo.','나는 신용카드로 내지만 아빠는 현금으로 내요.')}`,
+qs:[
+fl('Yo ___ comprar en línea. (preferir)','prefiero','yo → prefiero',{cat:GC}),
+fl('Ella ___ comprar en el mercado. (preferir)','prefiere','ella → prefiere',{cat:GC}),
+fl('¿Dónde ___ comprar tú? (preferir)','prefieres','tú → prefieres',{cat:GC}),
+mc('Nosotros ___ comprar en tiendas.','preferimos',['prefiero','prefieren','prefieres'],'nosotros는 어간 변화 없음',{cat:GC}),
+fl('Mis padres ___ el dinero en efectivo. (preferir)','prefieren','ellos → prefieren',{cat:GC}),
+mc('Prefiero comprar en línea ___ es rápido.','porque',['por qué','por eso','pero'],'이유 → porque',{cat:GC}),
+mc('¿___ prefieres comprar en el mercado?','Por qué',['Porque','Por eso','Pero'],'질문 → ¿Por qué?',{cat:GC}),
+mc('Me gusta pagar con tarjeta, ___ mi hermano prefiere pagar en efectivo.','pero',['porque','por eso','además'],'대조 → pero',{cat:GC}),
+mc('Es barato, ___ compro aquí.','por eso',['porque','pero','por qué'],'결과 → por eso',{cat:GC}),
+mc('Me ___ los zapatos nuevos.','gustan',['gusta','gustas','gusto'],'복수 명사 → gustan',{cat:GC}),
+od('"빠르기 때문에 온라인 구매를 선호해요" 를 만드세요','Prefiero comprar en línea porque es rápido','',{cat:GC}),
+mc('"Prefiero comprar en línea" 의 뜻은?','온라인으로 사는 걸 선호해요',['온라인 가게를 팔아요','가게에서 일해요','돈이 없어요'],'',{cat:GC})]},
+
+{id:'conn',t:'Connectors & Useful Questions',ko:'연결어·유용한 질문',ic:'🔗',lesson:`
+<div class="wrapx"><table class="tbl"><tr><th>연결어</th><th>뜻</th><th>예</th></tr>
+<tr><td>también</td><td>또한, ~도</td><td>Yo también compro pan.</td></tr><tr><td>además</td><td>게다가</td><td>Además, hay un museo.</td></tr><tr><td>pero</td><td>그러나</td><td>Me gusta, pero es caro.</td></tr>
+<tr><td>porque</td><td>왜냐하면</td><td>Voy porque me gusta.</td></tr><tr><td>por eso</td><td>그래서</td><td>Es barato, por eso compro.</td></tr><tr><td>normalmente</td><td>보통</td><td>Normalmente voy al centro.</td></tr>
+<tr><td>primero / después / finalmente</td><td>먼저 / 그 다음 / 마지막으로</td><td>Primero camina, después dobla.</td></tr></table></div>
+<div class="wrapx"><table class="tbl"><tr><th>질문</th><th>뜻</th></tr><tr><td>¿Dónde está...?</td><td>~는 어디에 있나요?</td></tr><tr><td>¿Adónde voy?</td><td>어디로 가야 하나요?</td></tr><tr><td>¿Cómo llego...?</td><td>~에 어떻게 가나요?</td></tr><tr><td>¿Qué compras...?</td><td>뭘 사니?</td></tr><tr><td>¿Dónde prefieres comprar?</td><td>어디서 사는 걸 선호해?</td></tr><tr><td>¿Por qué?</td><td>왜?</td></tr></table></div>`,
+qs:[
+mc('"además" 의 뜻은?','게다가',['그러나','그래서','먼저'],'',{cat:GC}),
+mc('"normalmente" 의 뜻은?','보통',['마지막으로','왜냐하면','그러나'],'',{cat:GC}),
+mc('Primero camina dos cuadras; ___ dobla a la derecha.','después',['pero','porque','también'],'순서: primero → después → finalmente',{cat:GC}),
+mc('Dobla a la derecha y, ___, llegas al banco.','finalmente',['primero','pero','porque'],'',{cat:GC}),
+mc('Me gusta el parque; ___, hay un museo cerca.','además',['pero','porque','finalmente'],'',{cat:GC}),
+mc('Voy al parque ___ me gusta caminar.','porque',['pero','por eso','primero'],'',{cat:GC}),
+mc('"어디서 사는 걸 선호해?" =','¿Dónde prefieres comprar?',['¿Qué compras?','¿Cómo llego?','¿Adónde voy?'],'',{cat:GC}),
+mc('¿Qué compras en la panadería?','Compro pan.',['Está cerca.','Prefiero el parque.','Sigue recto.'],'',{cat:GC}),
+mc('"은행은 어디에 있나요?" =','¿Dónde está el banco?',['¿Hay un banco?','¿Cómo compras?','¿Por qué el banco?'],'',{cat:GC}),
+fl('___, camina una cuadra. (먼저)','Primero','',{cat:GC}),
+mc('Yo compro pan y mi madre ___ compra pan. (~도)','también',['pero','porque','por eso'],'',{cat:GC})]},
+
+{id:'rev',t:'Spanish 1 Review',ko:'스페인어 1 복습 (시험에 함께 나와요)',ic:'♻️',lesson:`
+<div class="note">📌 안내문에 있듯이 시험에는 <b>Spanish 1의 익숙한 어휘·기본 문법</b>도 나와요. 아래를 빠르게 복습하세요.</div>
+<div class="wrapx"><table class="tbl"><tr><th>주제</th><th>핵심</th></tr>
+<tr><td>관사·성</td><td>el/un (남성), la/una (여성), los/las (복수). -o → 남성, -a → 여성이 많음 (el mapa, el día 예외)</td></tr>
+<tr><td>복수</td><td>모음 + s (tienda → tiendas), 자음 + es (ciudad → ciudades)</td></tr>
+<tr><td>현재: -ar</td><td>compro, compras, compra, compramos, compran</td></tr><tr><td>현재: -er</td><td>como, comes, come, comemos, comen</td></tr><tr><td>현재: -ir</td><td>vivo, vives, vive, vivimos, viven</td></tr>
+<tr><td>ir</td><td>voy, vas, va, vamos, van (ir <b>a</b> + 장소)</td></tr><tr><td>tener</td><td>tengo, tienes, tiene, tenemos, tienen</td></tr>
+<tr><td>ser / estar</td><td>ser = 정체·특징 (La plaza es grande) / estar = 위치·상태 (La plaza está en el centro)</td></tr>
+<tr><td>gustar</td><td>me gusta(n), te gusta(n), le gusta(n)</td></tr></table></div>`,
+qs:[
+mc('___ biblioteca','la',['el','los','un'],'',{cat:'Spanish 1'}),mc('___ museo','el',['la','las','una'],'',{cat:'Spanish 1'}),mc('___ farmacia','la',['el','los','un'],'',{cat:'Spanish 1'}),
+fl('Plural of "la tienda":','las tiendas','',{cat:'Spanish 1'}),
+fl('Yo (comprar) ___ pan.','compro','',{cat:'Spanish 1'}),fl('Tú (comer) ___ helado.','comes','',{cat:'Spanish 1'}),fl('Nosotros (vivir) ___ en Seúl.','vivimos','',{cat:'Spanish 1'}),fl('Ellos (caminar) ___ al parque.','caminan','',{cat:'Spanish 1'}),
+mc('La plaza ___ grande.','es',['está','hay','son'],'특징 → ser',{cat:'Spanish 1'}),mc('La plaza ___ en el centro.','está',['es','hay','son'],'위치 → estar',{cat:'Spanish 1'}),
+fl('Yo ___ al cine. (ir)','voy','',{cat:'Spanish 1'}),fl('Nosotros ___ al parque. (ir)','vamos','',{cat:'Spanish 1'}),
+fl('Ella ___ un libro. (tener)','tiene','',{cat:'Spanish 1'}),mc('Me ___ el mate.','gusta',['gustan','gusto','gustas'],'',{cat:'Spanish 1'})]}
+];
+const CS=[
+['Hay vs. Estar','Hay un parque en mi barrio. / El parque está cerca de la escuela.'],
+['Prepositions of Location','a la derecha de, a la izquierda de, al lado de, detrás de, delante de, entre, cerca de, lejos de, enfrente de'],
+['Affirmative Tú Commands','Camina, dobla, gira, sigue, cruza, ve, visita, compra, come, pasea, sal, haz, ten, sé'],
+['Giving Directions','Sigue recto, dobla a la izquierda/derecha, cruza la calle, camina una cuadra, está al lado de...'],
+['Expressions with Se','Se vende / se venden, se prepara / se preparan, se habla, se acepta / se aceptan, se puede / se pueden'],
+['Needs & Recommendations','Quiero..., necesito..., me gustaría..., ve a..., visita..., te recomiendo...'],
+['Shopping Preferences','Prefiero comprar en..., prefiero comprar en línea, me gusta..., porque...'],
+['Connectors','También, además, pero, porque, por eso, normalmente, primero, después, finalmente'],
+['Useful Questions','¿Dónde está...?, ¿Adónde voy?, ¿Cómo llego...?, ¿Qué compras...?, ¿Dónde prefieres comprar?, ¿Por qué?']];
+
+/* ================= 읽기 데이터 ================= */
+const R=[
+{id:'1',t:'광고: Panadería La Esquina',ic:'🥖',gl:'medialuna 크루아상 모양의 빵 · pasteles 케이크/파이 · horario 영업시간 · cerrado 닫힘 · de lunes a sábado 월~토',
+ html:`<b>🥖 PANADERÍA LA ESQUINA</b><br>¡Pan fresco todos los días!<br>Se venden medialunas, empanadas y pasteles.<br>Se prepara el pan todas las mañanas.<br>Se acepta dinero en efectivo y tarjeta de crédito.<br>Estamos en la avenida Rivadavia, al lado de la farmacia y enfrente del parque.<br>Horario: de lunes a sábado, de 7:00 a 20:00. Domingo: cerrado.`,
+ qs:[
+ mc('What is the main purpose of this text?','To advertise a bakery',['To explain how to get to a museum','To describe a neighborhood','To compare two countries'],'광고 = 빵집 홍보',{}),
+ mc('Which products are sold?','Medialunas, empanadas y pasteles',['Zapatos y ropa','Libros y regalos','Frutas y verduras'],'Se venden medialunas, empanadas y pasteles.',{}),
+ mc('Where is the bakery?','Al lado de la farmacia y enfrente del parque',['Detrás del banco y lejos del parque','Entre el cine y el museo','Cerca del estadio y al lado de la escuela'],'',{}),
+ mc('How can customers pay?','Con efectivo o tarjeta de crédito',['Solo en efectivo','Solo con tarjeta de crédito','No se acepta dinero'],'Se acepta dinero en efectivo y tarjeta de crédito.',{}),
+ mc('On which day is the bakery closed?','Domingo',['Lunes','Sábado','Viernes'],'Domingo: cerrado.',{}),
+ fl('Complete: Se ___ medialunas, empanadas y pasteles. (vender)','venden','복수 명사 → venden',{})]},
+{id:'2',t:'인포그래픽: 쇼핑 습관 설문',ic:'📊',gl:'encuesta 설문조사 · hábitos 습관 · estudiantes 학생들 · razón 이유 · rápido 빠른 · barato 싼 · productos 제품',
+ html:`<b>📊 Hábitos de compra — Encuesta (100 estudiantes, datos de ejemplo)</b><div class="bars"><div>Comprar en línea<div class="b" style="width:45%">45%</div></div><div>Comprar en tiendas<div class="b" style="width:35%">35%</div></div><div>Comprar en mercados o ferias<div class="b" style="width:20%">20%</div></div></div><b>¿Por qué compran en línea?</b><div class="bars"><div>Es rápido<div class="b" style="width:40%">40%</div></div><div>Es barato<div class="b" style="width:35%">35%</div></div><div>Hay muchos productos<div class="b" style="width:25%">25%</div></div></div>`,
+ qs:[
+ mc('What is the most common shopping habit in the survey?','Comprar en línea (45%)',['Comprar en tiendas (35%)','Comprar en ferias (20%)','Comprar en el kiosco'],'',{}),
+ mc('What percentage prefers markets or ferias?','20%',['35%','45%','25%'],'',{}),
+ mc('What is the main reason for buying online?','Es rápido',['Es barato','Hay muchos productos','Me gusta caminar'],'40%로 가장 높음',{}),
+ mc('True or false: More students prefer stores than markets.','Verdadero (35% > 20%)',['Falso (20% > 35%)','Falso (los dos son iguales)','No se sabe'],'',{}),
+ mc('What is the main idea of the infographic?','Most students in this survey prefer shopping online.',['Everyone buys only in markets.','Online shopping is expensive.','Nobody likes stores.'],'',{})]},
+{id:'3',t:'글: Mi barrio en La Boca',ic:'🎨',gl:'colorido 알록달록한 · turistas 관광객 · favorito 가장 좋아하는 · para llegar 도착하려면 · domingos 일요일마다',
+ html:`Hola, me llamo Sofía y vivo en La Boca, un barrio colorido de Buenos Aires. En mi barrio hay una plaza, una panadería y una feria artesanal. La plaza está cerca de mi casa y la panadería está enfrente de la escuela. Normalmente compro pan en la panadería. Los domingos visito la feria porque me gustan las artesanías. En La Boca se baila tango en la calle y hay muchos turistas. Mi lugar favorito es el estadio. Para llegar, sigue recto dos cuadras y dobla a la izquierda. ¡Te recomiendo visitar mi barrio!`,
+ qs:[
+ mc('What is the main idea?','Sofía describes her neighborhood in La Boca and what she does there.',['Sofía explains how to cook empanadas.','Sofía compares Argentina and Korea.','Sofía advertises a store.'],'',{}),
+ mc('Where is the bakery?','Enfrente de la escuela',['Cerca de su casa','En la feria','Al lado del estadio'],'',{}),
+ mc('Where is the plaza?','Cerca de su casa',['Enfrente de la escuela','Lejos del barrio','Detrás del estadio'],'',{}),
+ mc('What does Sofía do on Sundays?','Visita la feria artesanal',['Compra pan en la panadería','Baila tango en el estadio','Va a la escuela'],'',{}),
+ mc('Why does she visit the feria?','Porque le gustan las artesanías',['Porque es barato','Porque hay un estadio','Porque trabaja allí'],'',{}),
+ mc('What do people do in the street in La Boca?','Bailan tango',['Venden pan','Pagan con tarjeta','Cruzan el estadio'],'se baila tango = people dance tango',{}),
+ mc('How do you get to the stadium?','Sigue recto dos cuadras y dobla a la izquierda.',['Cruza la calle y dobla a la derecha.','Camina cinco cuadras.','Sal del barrio.'],'',{}),
+ fl('En La Boca ___ baila tango en la calle.','se','se baila',{})]},
+{id:'4',t:'글: Argentina y Corea',ic:'🇦🇷🇰🇷',gl:'muchas personas 많은 사람들 · pagan 지불한다 · frescos 신선한 · en los dos países 두 나라에서 (연습용 일반화 글)',
+ html:`En Argentina, muchas personas compran pan en la panadería y frutas en la feria. Normalmente pagan con dinero en efectivo. En Corea, muchas personas prefieren comprar en línea y pagan con tarjeta. Pero en los dos países hay mercados, centros comerciales y plazas. También en los dos países las personas prefieren productos frescos y buenos.`,
+ qs:[
+ mc('What is the main idea?','Shopping habits in Argentina and Korea have differences and similarities.',['Argentina is bigger than Korea.','Only Korea has markets.','Shopping is boring.'],'',{}),
+ mc('How do many people in Argentina often pay?','Con dinero en efectivo',['Con tarjeta de crédito','En línea','No pagan'],'',{}),
+ mc('What do many people in Korea prefer?','Comprar en línea',['Comprar en ferias','Pagar en efectivo','Comprar pan'],'',{}),
+ mc('Which is a similarity?','Hay mercados y centros comerciales en los dos países.',['Todos compran en línea.','Nadie usa tarjeta.','Solo hay plazas en Corea.'],'',{}),
+ mc('Where do many people in Argentina buy fruit?','En la feria',['En línea','En el banco','En la farmacia'],'',{})]}
+];
+R.forEach(r=>r.qs.forEach(q=>{q.ctx=`<b>📖 ${r.t}</b><br>`+r.html;q.cat='Reading';q.sec='TEST III'}));
+
+/* ================= 듣기 데이터 ================= */
+const DLG={
+l1:{t:'길 묻기 (Directions)',ic:'🧭',lines:[['A','Disculpa, ¿dónde está la farmacia?','실례합니다, 약국이 어디에 있나요?'],['B','Sigue recto dos cuadras y dobla a la izquierda. La farmacia está al lado del banco.','직진해서 두 블록 가다가 왼쪽으로 도세요. 약국은 은행 옆에 있어요.'],['A','¿Está lejos?','멀어요?'],['B','No, está cerca. Está enfrente del parque.','아니요, 가까워요. 공원 맞은편에 있어요.']],
+ qs:[mc('Where is the pharmacy?','Al lado del banco',['Al lado del cine','Detrás del parque','Entre la escuela y el banco'],'',{}),mc('How many blocks should A walk straight?','Dos',['Una','Tres','Cuatro'],'',{}),mc('Which way should A turn?','A la izquierda',['A la derecha','No dobla','Cruza el parque'],'',{}),mc('Is the pharmacy far?','No, está cerca.',['Sí, está muy lejos.','Sí, está en otra ciudad.','No se sabe.'],'',{}),mc('What is in front of the pharmacy?','El parque',['El banco','La escuela','La panadería'],'enfrente del parque',{})]},
+l2:{t:'쇼핑 선호 (Shopping preferences)',ic:'🛒',lines:[['A','Luis, ¿dónde prefieres comprar la ropa?','루이스, 옷은 어디서 사는 걸 선호해?'],['B','Prefiero comprar en línea porque es rápido. ¿Y tú, Ana?','빠르기 때문에 온라인으로 사는 걸 선호해. 너는, 안나?'],['A','Yo prefiero las tiendas porque me gusta ver los productos. Normalmente voy al centro comercial.','나는 제품을 보는 걸 좋아해서 가게를 선호해. 보통 쇼핑몰에 가.'],['B','Además, en el centro comercial se puede comer en un restaurante.','게다가 쇼핑몰에서는 식당에서 먹을 수도 있어.']],
+ qs:[mc('Where does Luis prefer to buy clothes?','En línea',['En el mercado','En una tienda','En la feria'],'',{}),mc('Why does Luis prefer that?','Porque es rápido',['Porque es barato','Porque le gusta ver los productos','Porque no tiene dinero'],'',{}),mc('What does Ana prefer?','Las tiendas',['Comprar en línea','El mercado','El kiosco'],'',{}),mc('Why does Ana prefer it?','Le gusta ver los productos',['Es rápido','Es barato','Hay un banco'],'',{}),mc('What can you do at the shopping center?','Comer en un restaurante',['Sacar un libro','Ver el mar','Tomar el metro'],'',{})]},
+l3:{t:'동네 소개 (Martín)',ic:'🎙️',lines:[['A','Hola, soy Martín y vivo en Buenos Aires.','안녕하세요, 저는 마르틴이고 부에노스아이레스에 살아요.'],['A','En mi barrio hay una plaza grande, un museo y una feria artesanal.','우리 동네에는 큰 광장, 박물관, 수공예 장터가 있어요.'],['A','Los domingos se venden artesanías en la feria.','일요일마다 장터에서 수공예품을 팔아요.'],['A','Si visitas mi barrio, te recomiendo comer empanadas y tomar mate.','우리 동네에 오면 엠파나다를 먹고 마테를 마셔 보세요.'],['A','Normalmente paseo por la plaza con mis amigos.','보통 친구들과 광장에서 산책해요.']],
+ qs:[mc('What is sold in the feria on Sundays?','Artesanías',['Zapatos','Libros','Helado'],'',{}),mc('What does Martín recommend?','Comer empanadas y tomar mate',['Visitar el banco','Comprar en línea','Tomar el metro'],'',{}),mc('Who does Martín walk with in the plaza?','Con sus amigos',['Con su familia','Solo','Con turistas'],'',{}),mc('What is in his neighborhood?','Una plaza, un museo y una feria',['Un cine y un estadio','Una escuela y un banco','Un hospital y una panadería'],'',{})]}
+};
+Object.entries(DLG).forEach(([k,d])=>d.qs.forEach(q=>{q.dlg=k;q.cat='Listening';q.sec='TEST IV'}));
+
+/* ================= 퀴즈 엔진 ================= */
+function wkey(q){return q.q+'|'+JSON.stringify(q.answer)}
+function addWrong(q){const k=wkey(q);if(S.wrong.some(w=>wkey(w)===k))return;const{type,answer,options,exp,ctx,audio,dlg,sec,cat,extra}=q;S.wrong.push({type,q:q.q,answer,options,exp,ctx,audio,dlg,sec,cat,extra});if(S.wrong.length>200)S.wrong.shift();save()}
+function delWrong(q){const k=wkey(q);S.wrong=S.wrong.filter(w=>wkey(w)!==k);save()}
+function quiz(el,qs0,o={}){
+  let qs=o.noshuffle?qs0.slice():shuffle(qs0),i=0,score=0,miss=[],secs={},lastSec=null,t0=Date.now();
+  const total=qs.length;
+  function show(){
+    if(i>=total)return done();
+    const q=qs[i];const opts=q.type==='mc'?shuffle(q.options):null;
+    let picked=[],bank=q.type==='order'?shuffle(q.answer.split(' ').concat(q.extra||[])).map((t,n)=>({t,n,used:false})):null;
+    const banner=(q.sec&&q.sec!==lastSec)?`<div class="secbanner">${q.sec}</div>`:'';lastSec=q.sec||lastSec;
+    el.innerHTML=`<div class="card"><div class="qhead"><span>${i+1} / ${total}</span><div class="bar"><i style="width:${i/total*100}%"></i></div><span>✔ ${score}</span></div>${banner}
+    ${q.ctx?`<div class="passage">${q.ctx}</div>`:''}
+    <div class="qtext">${q.q} ${q.audio?spk(q.audio):''} ${q.dlg?`<button class="btn sm sec" id="pd">▶ 대화 듣기</button> <button class="btn sm ghost" id="ps">■</button>`:''}</div>
+    <div id="ans"></div><div id="fb"></div></div>`;
+    if(q.dlg){$('#pd',el).onclick=()=>playDialog(q.dlg,.85);$('#ps',el).onclick=stopAudio}
+    const ans=$('#ans',el);let done_=false;
+    function fin(res,user){
+      if(done_)return;done_=true;
+      const ok=res==='ok'||res==='acc';
+      if(ok)score++;else{miss.push(q);addWrong(q)}
+      if(ok&&o.review)delWrong(q);
+      const sc=q.sec||q.cat||'';if(sc){secs[sc]=secs[sc]||[0,0];secs[sc][1]++;if(ok)secs[sc][0]++}
+      const ca=Array.isArray(q.answer)?q.answer[0]:q.answer;
+      $('#fb',el).innerHTML=`<div class="fb ${res==='no'?'bad':res==='acc'?'acc':'ok'}">${res==='ok'?'✅ 정답!':res==='acc'?'🟡 거의 맞았어요! 악센트(á é í ó ú ñ)를 확인하세요 → <b>'+esc(ca)+'</b>':'❌ 정답: <b>'+esc(ca)+'</b>'}${q.exp?`<br><small>${q.exp}</small>`:''}</div><button class="btn" id="nx">${i+1>=total?'결과 보기':'다음 ▶'}</button>`;
+      const nx=$('#nx',el);nx.focus();nx.onclick=()=>{i++;show()};
+    }
+    if(q.type==='mc'){
+      opts.forEach(t=>{const b=document.createElement('button');b.className='opt';b.textContent=t;b.onclick=()=>{ans.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.textContent===q.answer)x.classList.add('ok')});if(t!==q.answer)b.classList.add('bad');fin(t===q.answer?'ok':'no')};ans.appendChild(b)});
+    }else if(q.type==='fill'){
+      ans.innerHTML=`<input type="text" id="inp" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="여기에 입력 (¿ ¡ á é í ó ú ñ)"><div class="row" style="margin-top:6px">${['á','é','í','ó','ú','ñ','¿','¡'].map(c=>`<button class="btn sm ghost ch">${c}</button>`).join('')}<button class="btn" id="ck">확인</button></div>`;
+      const inp=$('#inp',el);inp.focus();
+      ans.querySelectorAll('.ch').forEach(b=>b.onclick=()=>{inp.value+=b.textContent;inp.focus()});
+      const go=()=>{if(done_)return;inp.disabled=true;$('#ck',el).disabled=true;fin(chk(inp.value,q.answer))};
+      $('#ck',el).onclick=go;inp.onkeydown=e=>{if(e.key==='Enter')go()};
+    }else{
+      const draw=()=>{ans.innerHTML=`<div class="built" id="bt">${picked.map(p=>`<button class="tok" data-n="${p.n}">${esc(p.t)}</button>`).join('')}</div><div id="bk">${bank.filter(b=>!b.used).map(b=>`<button class="tok" data-b="${b.n}">${esc(b.t)}</button>`).join('')}</div><div class="row" style="margin-top:8px"><button class="btn" id="ck">확인</button><button class="btn ghost" id="rs">지우기</button></div>`;
+        ans.querySelectorAll('[data-b]').forEach(b=>b.onclick=()=>{const it=bank.find(x=>x.n==b.dataset.b);it.used=true;picked.push(it);draw()});
+        ans.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{const it=picked.find(x=>x.n==b.dataset.n);it.used=false;picked=picked.filter(x=>x!==it);draw()});
+        $('#rs',el).onclick=()=>{bank.forEach(b=>b.used=false);picked=[];draw()};
+        $('#ck',el).onclick=()=>{if(done_)return;ans.querySelectorAll('button').forEach(b=>b.disabled=true);fin(chk(picked.map(p=>p.t).join(' '),[q.answer]))}};
+      draw();
+    }
+  }
+  function done(){
+    const pct=Math.round(score/total*100);
+    if(o.key){const p=S.scores[o.key];if(!p||score/total>=p.b/p.t){S.scores[o.key]={b:score,t:total}}save()}
+    const secHtml=Object.keys(secs).length>1?`<div class="wrapx"><table class="tbl"><tr><th>영역</th><th>점수</th></tr>${Object.entries(secs).map(([k,v])=>`<tr><td>${k}</td><td>${v[0]} / ${v[1]}</td></tr>`).join('')}</table></div>`:'';
+    const secs_=Math.round((Date.now()-t0)/1000);
+    el.innerHTML=`<div class="card"><h2>${pct>=80?'🎉':pct>=60?'👍':'💪'} ${score} / ${total} (${pct}%)</h2><p>${pct>=80?'훌륭해요! 합격선(80%)을 넘었어요.':'80% 이상을 목표로 한 번 더 도전해 봐요. 틀린 문제는 <b>복습</b> 탭에 저장돼요.'} <small>(소요 ${Math.floor(secs_/60)}분 ${secs_%60}초)</small></p>${secHtml}
+    ${miss.length?`<h3>틀린 문제</h3>`+miss.map(q=>`<div class="ex">${q.q}<span>정답: ${esc(Array.isArray(q.answer)?q.answer[0]:q.answer)}${q.exp?' · '+q.exp:''}</span></div>`).join(''):'<p>전부 맞혔어요! 🌟</p>'}
+    <div class="row" style="margin-top:10px"><button class="btn" id="rt">🔄 다시 풀기</button>${miss.length?'<button class="btn sec" id="rm">틀린 문제만 다시</button>':''}${o.back?'<button class="btn ghost" id="bk">← 돌아가기</button>':''}</div></div>`;
+    $('#rt',el).onclick=()=>quiz(el,qs0,o);
+    if(miss.length)$('#rm',el).onclick=()=>quiz(el,miss,{...o,key:null});
+    if(o.back)$('#bk',el).onclick=o.back;
+  }
+  show();
+}
+
+/* ================= 페이지 ================= */
+const TABS=[['home','🏠','홈'],['guide','🎯','시험 안내'],['vocab','📖','어휘'],['grammar','🧩','문법'],['rw','📝','읽기·쓰기'],['ls','🎧','듣기·말하기'],['culture','🌎','문화'],['mock','🏁','모의시험'],['review','🔁','복습']];
+$('#nav').innerHTML=TABS.map(t=>`<a href="#${t[0]}" data-t="${t[0]}">${t[1]} ${t[2]}</a>`).join('');
+const sc=k=>S.scores[k];const pc=k=>sc(k)?Math.round(sc(k).b/sc(k).t*100):null;
+const pill=k=>pc(k)==null?'':`<span class="pill">${pc(k)}%</span>`;
+const mastered=ks=>ks.filter(k=>pc(k)!=null&&pc(k)>=80).length;
+
+function pHome(){
+  const groups=[['📖 어휘 퀴즈',V.map(c=>'v:'+c.id),'#vocab'],['🧩 문법 퀴즈',G.map(g=>'g:'+g.id),'#grammar'],['📝 읽기 퀴즈',R.map(r=>'r:'+r.id),'#rw'],['🎧 듣기 퀴즈',Object.keys(DLG).map(k=>'l:'+k),'#ls'],['🌎 문화 퀴즈',['c:1'],'#culture'],['🏁 모의시험',['m:full'],'#mock']];
+  const all=groups.flatMap(g=>g[1]);const m=mastered(all);
+  app.innerHTML=`<div class="card"><h2>¡Hola! 👋 Unidad 2 중간고사 준비를 시작해요</h2><p>시험 안내문의 <b>목표 · 문법 · 어휘 · TEST II/III/IV</b>를 빠짐없이 담았어요. 설명 → 연습 → 퀴즈 → 모의시험 순서로 혼자서 끝낼 수 있어요.</p>
+  <div class="row"><div class="bar"><i style="width:${Math.round(m/all.length*100)}%"></i></div><b>${m} / ${all.length}</b></div><small>각 퀴즈에서 80% 이상을 받으면 ‘완료’로 계산돼요.</small></div>
+  <div class="grid">${groups.map(g=>`<a class="tile" href="${g[2]}"><b>${g[0]}</b><small>${mastered(g[1])} / ${g[1].length} 완료</small></a>`).join('')}</div>
+  <div class="card"><h3>📅 추천 학습 순서 (5일 플랜)</h3><ol><li><b>1일차</b> · 시험 안내 읽기 + 어휘: 장소·가게·교통 (단어장 → 플래시카드 → 퀴즈)</li><li><b>2일차</b> · 어휘: 물건·쇼핑·동사·문화 + 문법 ① hay/estar, 위치 전치사</li><li><b>3일차</b> · 문법 ② 명령형(tú), 길 안내, se 표현</li><li><b>4일차</b> · 문법 ③ 추천·선호·연결어 + 읽기·쓰기 (글쓰기 연습 필수!)</li><li><b>5일차</b> · 듣기·말하기 + 문화 + <b>모의시험</b> + 복습 탭에서 틀린 문제 정리</li></ol></div>
+  <div class="note">📌 <b>Friendly Reminder</b>: 시험에는 Unidad 2뿐 아니라 <b>Spanish 1의 익숙한 어휘·기본 문법</b>도 나와요. 문법 탭의 ‘Spanish 1 Review’도 꼭 풀어 보세요.</div>`;
+}
+
+function pGuide(){
+  const OBJ=[['Understand and interpret information','지도·인포그래픽·광고·글에서 주제, 세부 정보, 간단한 비교를 찾아요.','#rw'],['Describe places and activities','도시의 장소와 위치를 설명하고, 가게·공공장소에서 사람들이 하는 일/사는 것을 말해요.','#vocab'],['Give directions and recommendations','tú 긍정 명령형과 위치 표현으로 장소를 추천하고 가는 방법을 안내해요.','#grammar/dir'],['Describe services and shopping habits','se 표현으로 팔고/제공하고/하는 것을 설명하고, 쇼핑 선호와 이유를 말해요.','#grammar/se'],['Compare cultures','아르헨티나와 한국의 쇼핑 습관·공공장소·지역사회 생활의 비슷한 점/다른 점을 찾아요.','#culture'],['Communicate in writing and speaking','동네를 정리해서 쓰고, 장소·활동·선호·추천·길 안내 대화에 참여해요.','#ls/speak']];
+  app.innerHTML=`<h2>🎯 시험 안내 & 학습 목표</h2>
+  <div class="card"><h3>시험 구성</h3><div class="wrapx"><table class="tbl"><tr><th>영역</th><th>내용</th><th>준비</th></tr>
+  <tr><td><b>TEST II</b><br>Vocabulary & Grammar</td><td>장소·가게·서비스·쇼핑 습관 어휘, hay vs. estar, 위치 전치사, tú 명령형, se 표현으로 문장 완성·일상 상황 대응</td><td><a href="#vocab">어휘</a> · <a href="#grammar">문법</a></td></tr>
+  <tr><td><b>TEST III</b><br>Reading & Writing</td><td>인포그래픽·광고·짧은 글에서 주제/세부 정보 찾기 + 장소·활동·쇼핑 선호를 설명하는 짧고 체계적인 글쓰기(어휘·문법·연결어)</td><td><a href="#rw">읽기·쓰기</a></td></tr>
+  <tr><td><b>TEST IV</b><br>Listening & Speaking</td><td>동네·가게·쇼핑 습관 녹음 듣고 주제/세부 정보 찾기 + 질문·답변, 추천, 선호 말하기, 길 안내 롤플레이</td><td><a href="#ls">듣기·말하기</a></td></tr></table></div></div>
+  <div class="card"><h3>✅ 나는 이런 걸 할 수 있어요 (자기 점검)</h3>${OBJ.map((o,n)=>`<label style="display:block;margin:10px 0"><input type="checkbox" data-g="${n}" ${S.goals[n]?'checked':''}> <b>${o[0]}</b><br><small>${o[1]} → <a href="${o[2]}">공부하러 가기</a></small></label>`).join('')}</div>
+  <div class="card"><h3>📚 문법 한눈에 보기</h3><div class="wrapx"><table class="tbl"><tr><th>Grammar Topic</th><th>Spanish Structures to Know</th></tr>${CS.map(c=>`<tr><td>${c[0]}</td><td>${c[1]}</td></tr>`).join('')}</table></div></div>`;
+  app.querySelectorAll('[data-g]').forEach(c=>c.onchange=()=>{S.goals[c.dataset.g]=c.checked;save()});
+}
+
+/* ---- 어휘 ---- */
+function pVocab(sub){
+  if(!sub){
+    app.innerHTML=`<h2>📖 어휘 (Unit Vocabulary)</h2><p>카테고리별로 <b>단어장 → 플래시카드 → 퀴즈</b> 순서로 공부하세요. 🔊 버튼으로 발음도 들을 수 있어요.</p>
+    <div class="grid">${V.map(c=>{const k=c.w.filter(w=>S.known[w[0]]).length;return `<a class="tile" href="#vocab/${c.id}"><b>${c.ic} ${c.t}</b><small>${c.ko} · ${c.w.length}단어<br>암기 ${k}/${c.w.length} ${pill('v:'+c.id)}</small></a>`}).join('')}
+    <a class="tile" href="#vocab/all"><b>🔀 전체 어휘</b><small>${ALLW.length}단어 종합 ${pill('v:all')}</small></a></div>`;return;
+  }
+  const cat=sub==='all'?{id:'all',t:'All Vocabulary',ko:'전체 어휘',ic:'🔀',w:ALLW}:V.find(c=>c.id===sub);if(!cat){location.hash='#vocab';return}
+  let mode='list';
+  function head(){app.innerHTML=`<a href="#vocab">← 어휘 목록</a><h2>${cat.ic} ${cat.t}</h2><p>${cat.ko} · ${cat.w.length}단어</p><div class="row"><button class="btn ${mode==='list'?'':'sec'}" data-m="list">📋 단어장</button><button class="btn ${mode==='cards'?'':'sec'}" data-m="cards">🃏 플래시카드</button><button class="btn ${mode==='quiz'?'':'sec'}" data-m="quiz">✏️ 퀴즈</button></div><div id="vb"></div>`;
+    app.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>{mode=b.dataset.m;head();body()})}
+  function body(){
+    const vb=$('#vb');
+    if(mode==='list'){
+      vb.innerHTML=`<div class="row" style="margin:10px 0"><input type="text" id="srch" placeholder="검색 (스페인어/한국어)" style="flex:1"><label><input type="checkbox" id="hk"> 한글 가리기(클릭하면 보임)</label></div><div class="wrapx"><table class="tbl" id="vt"><tr><th></th><th>Español</th><th>한국어</th><th>English</th></tr>${cat.w.map(w=>`<tr><td>${spk(w[0].split(' / ')[0])}</td><td><b>${w[0]}</b></td><td class="ko">${w[1]}</td><td>${w[2]}</td></tr>`).join('')}</table></div>`;
+      $('#srch').oninput=e=>{const q=e.target.value.toLowerCase();vb.querySelectorAll('tr').forEach((r,i)=>{if(i)r.style.display=r.textContent.toLowerCase().includes(q)?'':'none'})};
+      $('#hk').onchange=e=>$('#vt').classList.toggle('hideko',e.target.checked);
+    }else if(mode==='cards'){
+      let deck=cat.w.slice(),idx=0,flip=false,onlyUnk=false;
+      const draw=()=>{if(onlyUnk)deck=cat.w.filter(w=>!S.known[w[0]]);else deck=cat.w.slice();
+        if(!deck.length){vb.innerHTML=`<div class="card"><h3>🎉 모두 외웠어요!</h3><button class="btn" id="al">전체 다시 보기</button></div>`;$('#al').onclick=()=>{onlyUnk=false;idx=0;draw()};return}
+        if(idx>=deck.length)idx=0;const w=deck[idx];const k=cat.w.filter(x=>S.known[x[0]]).length;
+        vb.innerHTML=`<div class="row" style="margin:10px 0"><div class="bar"><i style="width:${k/cat.w.length*100}%"></i></div><small>암기 ${k}/${cat.w.length}</small></div>
+        <div class="card flash" id="fc">${flip?`${w[1]}<small>${w[2]}</small>`:`${w[0]}<small>(눌러서 뜻 보기)</small>`}</div>
+        <div class="row"><button class="btn sec" id="sp">🔊 듣기</button><button class="btn ghost" id="un">🤔 헷갈려요</button><button class="btn" id="kn">😀 알아요</button></div>
+        <label style="display:block;margin-top:10px"><input type="checkbox" id="ou" ${onlyUnk?'checked':''}> 아직 못 외운 것만 보기</label><small>${idx+1} / ${deck.length}</small>`;
+        $('#fc').onclick=()=>{flip=!flip;draw()};$('#sp').onclick=()=>say(w[0].split(' / ')[0]);
+        $('#kn').onclick=()=>{S.known[w[0]]=true;save();flip=false;if(onlyUnk){}else idx++;draw()};
+        $('#un').onclick=()=>{S.known[w[0]]=false;save();flip=false;idx++;draw()};
+        $('#ou').onchange=e=>{onlyUnk=e.target.checked;idx=0;flip=false;draw()}};
+      draw();
+    }else{
+      vb.innerHTML=`<div class="card"><p>뜻 고르기 · 스페인어 고르기 · 철자 쓰기 · 듣기 문제가 섞여 나와요.</p><button class="btn" id="go">${sub==='all'?'20':Math.min(12,cat.w.length)}문제 시작</button></div>`;
+      $('#go').onclick=()=>quiz(vb,vocabQs(cat.w,sub==='all'?20:Math.min(12,cat.w.length)),{key:'v:'+cat.id,back:()=>{mode='list';head();body()}});
+    }
+  }
+  head();body();
+}
+
+/* ---- 문법 ---- */
+function pGrammar(sub){
+  if(!sub){
+    app.innerHTML=`<h2>🧩 문법 (Key Grammar & Structures)</h2><div class="grid">${G.map(g=>`<a class="tile" href="#grammar/${g.id}"><b>${g.ic} ${g.t}</b><small>${g.ko} ${pill('g:'+g.id)}</small></a>`).join('')}<a class="tile" href="#grammar/all"><b>🔀 문법 종합 퀴즈</b><small>모든 주제 섞어서 20문제 ${pill('g:all')}</small></a></div>
+    <details class="card"><summary><b>📚 한눈에 보기 (치트시트)</b></summary><div class="wrapx"><table class="tbl"><tr><th>Grammar Topic</th><th>Spanish Structures to Know</th></tr>${CS.map(c=>`<tr><td>${c[0]}</td><td>${c[1]}</td></tr>`).join('')}</table></div></details>`;return;
+  }
+  if(sub==='all'){
+    app.innerHTML=`<a href="#grammar">← 문법 목록</a><h2>🔀 문법 종합 퀴즈</h2><div id="qz"></div>`;
+    quiz($('#qz'),shuffle(G.flatMap(g=>g.qs)).slice(0,20),{key:'g:all',back:()=>location.hash='#grammar'});return;
+  }
+  const g=G.find(x=>x.id===sub);if(!g){location.hash='#grammar';return}
+  const i=G.indexOf(g);
+  app.innerHTML=`<a href="#grammar">← 문법 목록</a><h2>${g.ic} ${g.t}</h2><p><b>${g.ko}</b></p><div class="card">${g.lesson}</div>
+  <div class="card" id="qz"><h3>✏️ 연습문제 (${g.qs.length}문제) ${pill('g:'+g.id)}</h3><button class="btn" id="go">시작하기</button></div>
+  <div class="row">${i>0?`<a class="btn ghost" href="#grammar/${G[i-1].id}">← ${G[i-1].t}</a>`:''}${i<G.length-1?`<a class="btn sec" href="#grammar/${G[i+1].id}">${G[i+1].t} →</a>`:''}</div>`;
+  $('#go').onclick=()=>quiz($('#qz'),g.qs,{key:'g:'+g.id,back:()=>pGrammar(sub)});
+}
+
+/* ---- 읽기·쓰기 ---- */
+const MODEL=`Vivo en un barrio tranquilo. En mi barrio hay un parque, una panadería y una biblioteca. El parque está cerca de mi casa y la biblioteca está al lado de la escuela. Normalmente compro pan en la panadería porque se vende pan fresco todos los días. Además, prefiero comprar frutas en el mercado. Si visitas mi barrio, te recomiendo la heladería: ¡se prepara un helado delicioso! Primero, camina dos cuadras; después, dobla a la derecha. Finalmente, la heladería está enfrente de la plaza.`;
+const MODELKO=`저는 조용한 동네에 살아요. 우리 동네에는 공원, 빵집, 도서관이 있어요. 공원은 우리 집 근처에 있고 도서관은 학교 옆에 있어요. 매일 신선한 빵을 팔기 때문에 보통 빵집에서 빵을 사요. 게다가 과일은 시장에서 사는 걸 선호해요. 우리 동네에 오면 아이스크림 가게를 추천해요. 맛있는 아이스크림을 만들어요! 먼저 두 블록 걸어가고, 그다음 오른쪽으로 도세요. 마지막으로, 아이스크림 가게는 광장 맞은편에 있어요.`;
+function has(t,list){const L='a-záéíóúñü';return list.some(w=>new RegExp(`(^|[^${L}])${w}(?=$|[^${L}])`,'i').test(t))}
+const CHECKS=[['hay (존재)',['hay']],['está / están (위치)',['está','están']],['위치 전치사',['a la derecha de','a la izquierda de','al lado de','al lado del','detrás de','delante de','entre','cerca de','lejos de','enfrente de','enfrente del','cerca del','lejos del','detrás del','delante del']],['tú 명령형',['camina','dobla','gira','sigue','cruza','ve','visita','compra','come','pasea','sal','haz','ten','sé']],['se 표현',['se vende','se venden','se prepara','se preparan','se habla','se acepta','se aceptan','se puede','se pueden']],['추천/필요 표현',['quiero','necesito','me gustaría','te recomiendo']],['선호 표현',['prefiero','me gusta','me gustan']],['porque (이유)',['porque','por eso']],['연결어 (también, además, pero, normalmente, primero, después, finalmente)',['también','además','pero','normalmente','primero','después','finalmente']]];
+function pRW(sub){
+  if(!sub){
+    app.innerHTML=`<h2>📝 읽기 & 쓰기 (TEST III)</h2><p>시험에서는 <b>인포그래픽·광고·짧은 글</b>을 읽고 주제/세부 정보를 찾고, 장소·활동·쇼핑 선호를 <b>짧고 체계적으로</b> 써야 해요.</p>
+    <div class="grid">${R.map(r=>`<a class="tile" href="#rw/${r.id}"><b>${r.ic} ${r.t}</b><small>${r.qs.length}문제 ${pill('r:'+r.id)}</small></a>`).join('')}<a class="tile" href="#rw/write"><b>✍️ 글쓰기 연습실</b><small>자동 체크리스트로 내 글 점검</small></a></div>
+    <div class="card"><h3>읽기 전략</h3><ul><li>먼저 <b>제목·그림·숫자</b>로 글의 종류(광고/설문/글)와 주제를 파악해요.</li><li>질문의 <b>키워드</b>(Where? Why? How many?)를 보고 글에서 해당 부분을 찾아요.</li><li><b>se 표현</b>(se vende, se acepta)은 광고에 자주 나와요.</li><li>모르는 단어가 있어도 주변 단어로 뜻을 추측하세요.</li></ul></div>`;return;
+  }
+  if(sub==='write'){
+    app.innerHTML=`<a href="#rw">← 목록</a><h2>✍️ 글쓰기 연습실</h2>
+    <div class="card"><b>과제</b>: 내 동네(또는 상상의 동네)를 6~8문장으로 소개하세요. 장소와 위치, 사람들이 하는 일, 쇼핑 선호와 이유, 추천, 길 안내를 포함하면 좋아요.<br>
+    <small>시험 채점 포인트: 구성(Organization), 어휘, 문법, 연결어</small></div>
+    <div class="card"><b>문장 시작 도움말</b><br>${['Vivo en...','En mi barrio hay...','El parque está cerca de...','Normalmente compro... en...','Prefiero comprar... porque...','En la panadería se vende...','Te recomiendo visitar...','Primero, camina...','Después, dobla...','Finalmente, está...'].map(s=>`<span class="chip">${s}</span>`).join('')}</div>
+    <textarea id="wt" placeholder="Escribe aquí en español...">${esc(S.draft||'')}</textarea>
+    <div class="row" style="margin:6px 0"><small id="wc"></small>${['á','é','í','ó','ú','ñ','¿','¡'].map(c=>`<button class="btn sm ghost ch">${c}</button>`).join('')}<button class="btn sm ghost" id="sp">🔊 내 글 듣기</button></div>
+    <div class="card"><b>✅ 자동 체크리스트</b><ul class="chk" id="cl"></ul><small>※ 단순 단어 탐지예요. 문법이 맞는지는 직접 확인하세요!</small></div>
+    <details class="card"><summary><b>📄 모범 예시 보기</b></summary><p>${MODEL} ${spk(MODEL)}</p><p><small>${MODELKO}</small></p></details>
+    <div class="card"><b>자가 채점표 (각 4점 만점)</b><ul><li>구성: 인사/주제 → 장소·위치 → 활동·선호 → 추천·길 안내 순서가 있나요?</li><li>어휘: 단원 어휘를 8개 이상 썼나요?</li><li>문법: hay/estar, se, 명령형, 관사·성수 일치를 확인했나요?</li><li>연결어: porque, además, pero, primero/después/finalmente를 썼나요?</li></ul></div>`;
+    const wt=$('#wt');
+    const upd=()=>{const t=wt.value;S.draft=t;save();const words=(t.match(/[a-záéíóúñü]+/gi)||[]).length;const sents=(t.match(/[.!?]+/g)||[]).length;$('#wc').textContent=`${words}단어 · ${sents}문장`;
+      $('#cl').innerHTML=CHECKS.map(c=>{const ok=has(t,c[1]);return `<li>${ok?'✅':'⬜'} ${c[0]}</li>`}).join('')+`<li>${sents>=6?'✅':'⬜'} 6문장 이상</li>`};
+    wt.oninput=upd;upd();
+    app.querySelectorAll('.ch').forEach(b=>b.onclick=()=>{const p=wt.selectionStart;wt.value=wt.value.slice(0,p)+b.textContent+wt.value.slice(wt.selectionEnd);wt.focus();wt.selectionStart=wt.selectionEnd=p+1;upd()});
+    $('#sp').onclick=()=>say(wt.value||'Escribe algo primero');return;
+  }
+  const r=R.find(x=>x.id===sub);if(!r){location.hash='#rw';return}
+  app.innerHTML=`<a href="#rw">← 목록</a><h2>${r.ic} ${r.t}</h2><div class="passage">${r.html} <div style="margin-top:6px">${spk(r.html.replace(/<[^>]+>/g,' ').replace(/📖|📊|🥖/g,''))}</div></div>
+  <details class="card"><summary>📝 단어 도움말</summary><p>${r.gl}</p></details><div class="card" id="qz"><h3>✏️ 이해 문제 ${pill('r:'+r.id)}</h3><button class="btn" id="go">시작하기</button></div>`;
+  $('#go').onclick=()=>quiz($('#qz'),r.qs.map(q=>({...q,ctx:null})),{key:'r:'+r.id,noshuffle:false,back:()=>pRW(sub)});
+}
+
+/* ---- 듣기·말하기 ---- */
+const ROLE=[
+{id:'r1',t:'길 안내 롤플레이',ic:'🧭',sit:'관광객(A)이 길을 물어봐요. 당신(B)은 길을 알려주세요.',phr:['¿Dónde está...?','¿Cómo llego a...?','Sigue recto...','Dobla a la izquierda/derecha','Cruza la calle','Camina una cuadra','Está al lado de... / enfrente de...'],
+ lines:[['A','Disculpa, ¿cómo llego al museo?','실례합니다, 박물관에 어떻게 가나요?'],['B','Sigue recto una cuadra, cruza la calle y dobla a la derecha.','직진 한 블록, 길을 건너 오른쪽으로 도세요.'],['A','¿Dónde está exactamente?','정확히 어디에 있어요?'],['B','Está al lado de la biblioteca y enfrente del parque.','도서관 옆, 공원 맞은편이에요.']],ck:['¿Dónde está / Cómo llego 질문을 썼나요?','tú 명령형을 2개 이상 썼나요?','위치 전치사(al lado de, enfrente de...)를 썼나요?','primero / después / finalmente로 순서를 말했나요?']},
+{id:'r2',t:'장소 추천하기',ic:'💬',sit:'친구(A)가 필요한 것을 말해요. 알맞은 장소를 추천하세요.',phr:['Necesito...','Quiero...','Me gustaría...','Ve a... / Ve al...','Visita...','Te recomiendo...'],
+ lines:[['A','Tengo hambre y quiero comer pan.','배고파, 빵을 먹고 싶어.'],['B','Ve a la panadería. Se vende pan fresco todos los días.','빵집에 가. 매일 신선한 빵을 팔아.'],['A','Necesito sacar dinero.','돈을 뽑아야 해.'],['B','Ve al cajero automático. Está al lado del banco.','ATM에 가. 은행 옆에 있어.']],ck:['Ve a / Ve al(a+el=al)를 정확히 썼나요?','se 표현(se vende, se puede...)을 썼나요?','Te recomiendo + 동사/명사를 썼나요?']},
+{id:'r3',t:'쇼핑 선호 인터뷰',ic:'💳',sit:'친구(A)가 쇼핑 습관을 물어봐요. 이유와 함께 대답하세요.',phr:['Prefiero comprar en...','Prefiero comprar en línea','Me gusta... / Me gustan...','porque...','pero...','Normalmente...'],
+ lines:[['A','¿Dónde prefieres comprar?','어디서 사는 걸 선호해?'],['B','Prefiero comprar en línea porque es rápido.','빠르니까 온라인으로 사는 걸 선호해.'],['A','¿Qué compras en línea?','온라인으로 뭘 사?'],['B','Normalmente compro libros y ropa, pero compro el pan en la panadería.','보통 책과 옷을 사지만 빵은 빵집에서 사.']],ck:['Prefiero + 동사원형을 썼나요?','porque로 이유를 말했나요?','pero / además / normalmente을 썼나요?','¿Qué compras...? ¿Por qué?에 대답했나요?']},
+{id:'r4',t:'1분 동네 소개',ic:'🎙️',sit:'1분 동안 혼자 말하기: 내 동네를 소개하세요.',phr:['Vivo en...','En mi barrio hay...','... está cerca de...','En... se vende / se puede...','Me gusta... porque...','Te recomiendo visitar...'],
+ lines:[['A','Vivo en un barrio tranquilo. Hay un parque, una panadería y una biblioteca.','저는 조용한 동네에 살아요. 공원, 빵집, 도서관이 있어요.'],['A','El parque está cerca de mi casa. En la panadería se vende pan fresco.','공원은 우리 집 근처에 있어요. 빵집에서는 신선한 빵을 팔아요.'],['A','Me gusta mi barrio porque es tranquilo. Te recomiendo visitar el parque.','조용해서 우리 동네가 좋아요. 공원을 방문해 보세요.']],ck:['hay와 está를 구분해서 썼나요?','위치 전치사를 썼나요?','se 표현을 썼나요?','선호/이유(me gusta... porque)를 말했나요?','추천(te recomiendo)으로 마무리했나요?']}];
+const QS=[['¿Dónde está la farmacia?','약국이 어디에 있나요?','La farmacia está al lado del banco.'],['¿Adónde voy para comprar pan?','빵을 사려면 어디로 가야 하죠?','Ve a la panadería.'],['¿Cómo llego al parque?','공원에 어떻게 가나요?','Sigue recto dos cuadras y dobla a la izquierda.'],['¿Qué compras en la feria?','장터에서 뭘 사니?','Compro frutas, verduras y artesanías.'],['¿Dónde prefieres comprar?','어디서 사는 걸 선호해?','Prefiero comprar en línea.'],['¿Por qué prefieres comprar en línea?','왜 온라인 구매를 선호해?','Porque es rápido y barato.'],['¿Qué hay en tu barrio?','너희 동네에는 뭐가 있어?','En mi barrio hay un parque y una biblioteca.'],['¿Dónde está tu escuela?','너희 학교는 어디에 있어?','Mi escuela está cerca de mi casa.'],['¿Qué se vende en la panadería?','빵집에서는 뭘 팔아요?','Se vende pan y empanadas.'],['¿Qué se puede hacer en el parque?','공원에서 뭘 할 수 있어요?','Se puede caminar y pasear.'],['¿Cómo pagas normalmente?','보통 어떻게 계산해?','Normalmente pago con tarjeta de crédito.'],['¿Qué te recomiendo visitar en mi ciudad?','내 도시에서 뭘 방문하는 게 좋을까?','Te recomiendo visitar el museo.']];
+function dlgHtml(k){const d=DLG[k];return d.lines.map(l=>`<div class="ex"><b>${l[0]}:</b> ${l[1]}<span>${l[2]}</span></div>`).join('')}
+function pLS(sub){
+  if(!sub){
+    app.innerHTML=`<h2>🎧 듣기 & 말하기 (TEST IV)</h2><p>시험에서는 <b>녹음</b>을 듣고 주제/세부 정보를 찾고, 질문·답변·추천·선호·길 안내 <b>대화/롤플레이</b>를 해요.</p>
+    <h3>🎧 듣기</h3><div class="grid">${Object.entries(DLG).map(([k,d])=>`<a class="tile" href="#ls/${k}"><b>${d.ic} ${d.t}</b><small>${d.qs.length}문제 ${pill('l:'+k)}</small></a>`).join('')}</div>
+    <h3>🗣️ 말하기</h3><div class="grid"><a class="tile" href="#ls/speak"><b>🗣️ 롤플레이 & 질문 연습</b><small>모범 대화 · 체크리스트 · 랜덤 질문</small></a></div>
+    <div class="note">🔊 소리는 브라우저의 음성 합성(TTS)을 사용해요. 스페인어 음성이 없으면 기기 설정에서 추가해 주세요. 처음엔 느리게(0.7x), 익숙해지면 보통 속도로!</div>`;return;
+  }
+  if(sub==='speak'){
+    app.innerHTML=`<a href="#ls">← 목록</a><h2>🗣️ 말하기 연습</h2>
+    <div class="card"><h3>🎲 랜덤 질문 (소리 내어 한 문장으로 대답!)</h3><div id="rq" class="qtext">버튼을 눌러 질문을 받아요.</div><div class="row"><button class="btn" id="nq">다음 질문</button><button class="btn sec" id="sq">🔊 질문 듣기</button><button class="btn ghost" id="aq">모범 답안 보기</button></div><div id="ra" class="ex" style="display:none"></div></div>
+    ${ROLE.map(r=>`<div class="card"><h3>${r.ic} ${r.t}</h3><p>${r.sit}</p><div>${r.phr.map(p=>`<span class="chip">${p}</span>`).join('')}</div>
+    <details><summary><b>모범 대화 보기</b></summary>${r.lines.map(l=>`<div class="ex"><b>${l[0]}:</b> ${l[1]} ${spk(l[1])}<span>${l[2]}</span></div>`).join('')}</details>
+    <b>✅ 체크리스트</b><ul class="chk">${r.ck.map((c,n)=>`<li><label><input type="checkbox" data-p="${r.id}-${n}" ${S.practiced[r.id+'-'+n]?'checked':''}> ${c}</label></li>`).join('')}</ul>${r.id==='r4'?'<button class="btn sm" id="tm">⏱️ 60초 타이머 시작</button> <span id="tv"></span>':''}</div>`).join('')}
+    <div class="note">💡 <b>연습 방법</b>: ① 모범 대화를 듣고 따라 말하기(shadowing) → ② 모범 대화를 가리고 내 말로 바꿔 말하기 → ③ 휴대폰으로 녹음해서 들어 보기 → ④ 체크리스트 확인.</div>`;
+    let cur=null;const rq=$('#rq'),ra=$('#ra');
+    $('#nq').onclick=()=>{cur=QS[Math.floor(Math.random()*QS.length)];rq.innerHTML=`${cur[0]}<br><small style="color:var(--mut)">${cur[1]}</small>`;ra.style.display='none';say(cur[0])};
+    $('#sq').onclick=()=>cur&&say(cur[0]);$('#aq').onclick=()=>{if(cur){ra.style.display='block';ra.innerHTML=`${spk(cur[2])} ${cur[2]}`}};
+    app.querySelectorAll('[data-p]').forEach(c=>c.onchange=()=>{S.practiced[c.dataset.p]=c.checked;save()});
+    const tm=$('#tm');if(tm)tm.onclick=()=>{let t=60;clearInterval(window._tm);$('#tv').textContent=t+'초';window._tm=setInterval(()=>{t--;$('#tv').textContent=t>0?t+'초':'⏰ 끝!';if(t<=0)clearInterval(window._tm)},1000)};
+    return;
+  }
+  const d=DLG[sub];if(!d){location.hash='#ls';return}
+  app.innerHTML=`<a href="#ls">← 목록</a><h2>${d.ic} ${d.t}</h2>
+  <div class="card"><div class="row"><button class="btn" id="pl">▶ 재생</button><button class="btn ghost" id="st">■ 정지</button><label>속도 <select id="rt" style="width:auto"><option value=".7">느리게 0.7x</option><option value=".85" selected>보통 0.85x</option><option value="1">빠르게 1x</option></select></label></div>
+  <label style="display:block;margin-top:8px"><input type="checkbox" id="tr"> 대본·해석 보기 (먼저 안 보고 들어 보세요!)</label><div id="ts" style="display:none">${dlgHtml(sub)}</div></div>
+  <div class="card" id="qz"><h3>✏️ 듣기 문제 ${pill('l:'+sub)}</h3><button class="btn" id="go">시작하기</button></div>`;
+  $('#pl').onclick=()=>playDialog(sub,+$('#rt').value);$('#st').onclick=stopAudio;$('#tr').onchange=e=>$('#ts').style.display=e.target.checked?'block':'none';
+  $('#go').onclick=()=>quiz($('#qz'),d.qs,{key:'l:'+sub,back:()=>pLS(sub)});
+}
+
+/* ---- 문화 ---- */
+const CUL=[['La Boca','부에노스아이레스의 알록달록한 건물, 탱고, 축구 경기장으로 유명한 동네.'],['el tango','부에노스아이레스 지역에서 발전한 음악과 춤. 길거리 공연도 볼 수 있어요.'],['el mate','마테(yerba mate) 잎으로 만든 전통 차. 친구·가족이 함께 나눠 마셔요.'],['el asado','가족·친구가 모여 먹는 아르헨티나식 바비큐(고기 구이).'],['las empanadas','고기, 치즈, 채소 등을 넣은 페이스트리(굽거나 튀김).'],['la feria artesanal','수공예품(las artesanías)을 파는 장터.'],['el kiosco','길가의 작은 가게/매점. 음료, 간식 등을 팔아요.'],['el subte','부에노스아이레스에서 지하철을 부르는 말 (= el metro).'],['los espacios públicos','광장(plaza), 공원 등 사람들이 모이는 공공 공간.']];
+function pCulture(){
+  const cq=[mc('La Boca is ___.','a colorful neighborhood in Buenos Aires',['a city in Korea','a type of food','a shopping mall'],'',{}),mc('El mate is ___.','a traditional drink',['a dance','a kind of bread','a stadium'],'',{}),mc('El asado is ___.','Argentine barbecue',['a kind of dance','a public square','a bank'],'',{}),mc('Las empanadas are ___.','pastries filled with meat, cheese or vegetables',['shoes','buses','public spaces'],'',{}),mc('El tango is ___.','music and dance from the Buenos Aires area',['a type of store','a drink','a sport'],'',{}),mc('Una feria artesanal is ___.','a market for handmade crafts',['a hospital','a subway station','a bank'],'',{}),mc('In Buenos Aires, "el subte" is ___.','the subway',['a snack','a park','a school'],'',{}),mc('A kiosco is ___.','a small shop or stand that sells snacks and drinks',['a large mall','a bus','a library'],'',{}),mc('Which is a similarity between Argentina and Korea in Unit 2?','Both have markets, malls and public spaces where people meet.',['Both only shop online.','Neither has plazas or parks.','Nobody pays with cards.'],'',{})];
+  cq.forEach(q=>{q.cat='Culture'});
+  app.innerHTML=`<h2>🌎 문화: Argentina & Korea</h2>
+  <div class="grid">${CUL.map(c=>`<div class="card" style="margin:0"><b>${c[0]}</b> ${spk(c[0])}<br><small>${c[1]}</small></div>`).join('')}</div>
+  <div class="card"><h3>🔍 아르헨티나 ↔ 한국 비교 (토론·글쓰기 소재)</h3><div class="wrapx"><table class="tbl"><tr><th>주제</th><th>🇦🇷 Argentina</th><th>🇰🇷 Corea</th><th>공통점</th></tr>
+  <tr><td>가게</td><td>panaderías, kioscos, ferias</td><td>편의점, 전통시장, 대형마트</td><td>mercados, centros comerciales</td></tr>
+  <tr><td>쇼핑 방식</td><td>tiendas y ferias, dinero en efectivo도 많이 써요</td><td>comprar en línea, tarjeta</td><td>productos frescos, comprar en línea y en tienda</td></tr>
+  <tr><td>공공장소</td><td>plazas, parques, mate</td><td>공원, 강변공원, 광장</td><td>espacios públicos para reunirse</td></tr>
+  <tr><td>교통</td><td>subte, autobús</td><td>지하철, 버스</td><td>transporte público</td></tr></table></div>
+  <div class="note">📝 위 내용은 수업 토론을 돕는 <b>일반적인 예시</b>예요. 시험에서는 수업 시간에 배운 내용과 교재를 기준으로 비교하세요.</div>
+  <h3>문장 틀 (Sentence frames)</h3>${E('En Argentina la gente prefiere comprar en la feria, pero en Corea prefieren comprar en línea.','')}${E('En los dos países hay mercados y centros comerciales.','')}${E('También, en los dos países las personas se reúnen en plazas y parques.','')}</div>
+  <div class="card" id="qz"><h3>✏️ 문화 퀴즈 ${pill('c:1')}</h3><button class="btn" id="go">시작하기</button></div>`;
+  $('#go').onclick=()=>quiz($('#qz'),cq,{key:'c:1',back:pCulture});
+}
+
+/* ---- 모의시험 ---- */
+function pMock(){
+  app.innerHTML=`<h2>🏁 모의시험</h2><p>실제 시험 구성(TEST II·III·IV)을 따라 섞어서 풀어 보는 종합 연습이에요. 영역별 점수도 알려줘요.</p>
+  <div class="card"><b>전체 모의시험 (약 40문제)</b><ul><li>TEST II 어휘·문법 22문제</li><li>TEST III 읽기 10문제 (+ 글쓰기는 <a href="#rw/write">연습실</a>에서!)</li><li>TEST IV 듣기 8문제 (말하기는 <a href="#ls/speak">말하기 연습</a>에서!)</li></ul><div class="row"><button class="btn" id="go">시작하기 ${pill('m:full')}</button><button class="btn sec" id="q10">⚡ 빠른 10문제</button></div></div><div id="qz"></div>`;
+  const gQs=()=>G.flatMap(g=>g.qs).map(q=>({...q,sec:'TEST II'}));
+  const pickR=n=>shuffle(R.flatMap(r=>r.qs)).slice(0,n);
+  const pickL=n=>shuffle(Object.values(DLG).flatMap(d=>d.qs)).slice(0,n);
+  $('#go').onclick=()=>{const qs=[...vocabQs(ALLW,8),...shuffle(gQs()).slice(0,14),...pickR(10),...pickL(8)];$('.card').style.display='none';quiz($('#qz'),qs,{key:'m:full',noshuffle:true,back:pMock})};
+  $('#q10').onclick=()=>{const qs=shuffle([...vocabQs(ALLW,10),...gQs(),...pickR(6),...pickL(4)]).slice(0,10);$('.card').style.display='none';quiz($('#qz'),qs,{noshuffle:true,back:pMock})};
+}
+
+/* ---- 복습 ---- */
+function pReview(){
+  const n=S.wrong.length;
+  app.innerHTML=`<h2>🔁 틀린 문제 복습</h2><div class="card"><p>지금까지 틀린 문제가 <b>${n}개</b> 저장되어 있어요. 맞히면 목록에서 사라져요.</p>${n?`<div class="row"><button class="btn" id="go">복습 시작</button><button class="btn ghost" id="cl">목록 비우기</button></div>`:'<p>🌟 틀린 문제가 없어요! 모의시험에 도전해 보세요.</p>'}</div>
+  <div id="qz"></div><div class="card"><h3>📚 진도 초기화</h3><button class="btn ghost" id="rs">모든 기록 지우기</button></div>`;
+  if(n){$('#go').onclick=()=>{$('.card').style.display='none';quiz($('#qz'),S.wrong.slice(),{review:true,back:pReview})};$('#cl').onclick=()=>{if(confirm('틀린 문제 목록을 비울까요?')){S.wrong=[];save();pReview()}}}
+  $('#rs').onclick=()=>{if(confirm('점수·암기·체크 기록을 모두 지울까요?')){S={scores:{},known:{},wrong:[],goals:{},practiced:{},draft:''};save();route()}};
+}
+
+/* ================= 라우터 ================= */
+const PAGES={home:pHome,guide:pGuide,vocab:pVocab,grammar:pGrammar,rw:pRW,ls:pLS,culture:pCulture,mock:pMock,review:pReview};
+function route(){
+  const [tab,sub]=(location.hash.slice(1)||'home').split('/');
+  stopAudio();clearInterval(window._tm);
+  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.t===tab));
+  (PAGES[tab]||pHome)(sub);window.scrollTo(0,0);
+  const on=$('#nav a.on');if(on)on.scrollIntoView({inline:'center',block:'nearest'});
+}
+window.addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
